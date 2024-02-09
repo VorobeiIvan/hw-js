@@ -1,8 +1,6 @@
-
 // 1. Модуль 1 - Змінні та типи. Розгалуження. Цикли
 // _______________________________________________________________________________
 // _______________________________________________________________________________
-
 
 // Оголоси дві змінні, productName для назви товару, і pricePerItem для зберігання ціни за штуку. При оголошенні надай змінним наступні значення:
 
@@ -21,11 +19,10 @@
 // console.log(pricePerItem);
 // 2000
 
-
-const productName="Droid";
+const productName = 'Droid';
 const pricePerItem = 2000;
 
-console.log("Task1");
+console.log('Task1');
 
 console.log('productName =', productName);
 console.log('pricePerItem =', pricePerItem);
@@ -43,8 +40,7 @@ console.log('pricePerItem =', pricePerItem);
 
 // // Change code below this line
 
-
-console.log("Task2")
+console.log('Task2');
 
 // Оголоси наступні змінні, використовуючи ключове слово const або let, і присвой їм відповідні значення.
 
@@ -64,7 +60,7 @@ console.log("Task2")
 // Оголошена змінна isAdmin
 // Значення змінної isAdmin - це буль false
 
-console.log("Task3")
+console.log('Task3');
 
 // Доповни код, присвоївши змінній totalPrice вираз для підрахунку загальної суми замовлення. Змінна pricePerItem зберігає ціну однієї одиниці товару, а orderedQuantity - кількість одиниць товару в замовленні.
 
@@ -81,8 +77,7 @@ console.log("Task3")
 // // Change code below this line
 // const totalPrice = pricePerItem;
 
-
-console.log("Task4")
+console.log('Task4');
 
 // Оголоси змінну message і запиши в неї повідомлення про покупку, рядок у форматі: "You picked <назва товару>, price per item is <ціна товару> credits". Де <назва товару> і <ціна товару> — це значення змінних productName і pricePerItem. Використовуй синтаксис шаблонних рядків.
 
@@ -97,8 +92,7 @@ console.log("Task4")
 
 // // Change code below this line
 
-
-console.log("Task5")
+console.log('Task5');
 
 // Магазин з продажу ремонтних дроїдів готовий до відкриття, залишилося написати скрипт для їх замовлення. Оголоси змінні та присвой їм відповідні значення:
 
@@ -118,7 +112,7 @@ console.log("Task5")
 // Оголошена змінна message
 // Значення змінної message - це рядок "You ordered droids worth 4850 credits. Delivery (50 credits) is included in total price."
 
-console.log("Task6")
+console.log('Task6');
 // Оголоси функцію sayHi, всередині якої додай console.log() з рядком "Hello, this is my first function!". Після оголошення виклич функцію sayHi.
 
 // Очікується оголошення функції
@@ -126,7 +120,7 @@ console.log("Task6")
 // В тілі функції sayHi є console.log("Hello, this is my first function!")
 // Після оголошення є виклик функції sayHi
 
-console.log("Task7")
+console.log('Task7');
 // Функція add повинна вміти додавати три числа і виводити результат у консоль. Додай функції add три параметри: a, b і c, які будуть отримувати значення аргументів під час її виклику.
 
 // Доповни console.log() таким чином, щоб він логував рядок "Addition result equals <result>", де <result> - це сума переданих чисел.
@@ -145,7 +139,7 @@ console.log("Task7")
 // add(10, 20, 30);
 // add(5, 10, 15);
 
-console.log("Task8")
+console.log('Task8');
 
 // Доповни код функції add таким чином, щоб вона повертала результат додавання значень трьох параметрів: a, b і c.
 
@@ -158,8 +152,6 @@ console.log("Task8")
 // function add(a, b, c) {
 //   // Change code below this line
 
-
-
 //   // Change code above this line
 // }
 
@@ -169,8 +161,7 @@ console.log("Task8")
 // console.log(add(10, 20, 30));
 // console.log(add(5, 10, 15));
 
-console.log("Task9")
-
+console.log('Task9');
 // Функція makeMessage(name, price) складає і повертає повідомлення про покупку. Вона оголошує два параметри, значення яких будуть задаватися під час її виклику.
 
 // name - назва товару
@@ -192,7 +183,7 @@ console.log("Task9")
 //   return message;
 // };
 
-console.log("Task10")
+console.log('Task10');
 
 // Функція calculateTotalPrice рахує і повертає загальну суму покупки. Вона приймає два параметри, значення яких будуть задаватися під час її виклику.
 
@@ -215,7 +206,7 @@ console.log("Task10")
 //   return totalPrice;
 // };
 
-console.log("Task11")
+console.log('Task11');
 
 // Функція makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) складає і повертає повідомлення про покупку ремонтних дроїдів. Вона оголошує три параметри, значення яких будуть задаватися під час її виклику.
 
@@ -231,13 +222,11 @@ console.log("Task11")
 // function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
 //   // Change code below this line
 
-
-
 //   // Change code above this line
 //   return message;
 // }
 
-console.log("Task12")
+console.log('Task12');
 
 // Функція isAdult оголошує один параметр age (вік), значення якого буде задаватися під час її виклику. Присвой змінній passed вираз перевірки віку користувача на повноліття. Людина вважається повнолітньою у віці 18 років і старше.
 
@@ -255,7 +244,7 @@ console.log("Task12")
 //   return passed;
 // }
 
-console.log("Task13")
+console.log('Task13');
 
 // Функція isValidPassword (password) перевіряє рівність збереженого і введеного паролів і повертає результат перевірки - буль true або false. Змінна SAVED_PASSWORD зберігає значення попередньо збереженого пароля. Введений пароль передається у параметр password.
 
@@ -275,7 +264,7 @@ console.log("Task13")
 //   return isMatch;
 // }
 
-console.log("Task14")
+console.log('Task14');
 
 // Додай вираз перевірки повноліття користувача, значення параметра age, в умову для інструкції if.
 
@@ -299,7 +288,7 @@ console.log("Task14")
 //   return message;
 // }
 
-console.log("Task15")
+console.log('Task15');
 
 // Функція checkStorage(available, ordered) перевіряє можливість оформлення замовлення і повертає повідомлення про результат. Вона оголошує два параметри, значення яких будуть задаватися під час її виклику:
 
@@ -323,8 +312,7 @@ console.log("Task15")
 //   return message;
 // }
 
-
-console.log("Task16")
+console.log('Task16');
 
 // Заміни вирази зі стандартними математичними операторами на комбінований оператор присвоєння з додаванням, відніманням, множенням і діленням.
 
@@ -348,8 +336,7 @@ console.log("Task16")
 // c = c * 3;
 // d = d / 10;
 
-
-console.log("Task17")
+console.log('Task17');
 
 // Станція з продажу ремонтних дроїдів готова до запуску, залишилося написати програмне забезпечення для відділу продажів.
 
@@ -379,8 +366,7 @@ console.log("Task17")
 //   return message;
 // }
 
-
-console.log("Task18")
+console.log('Task18');
 
 // Функція checkPassword(password) отримує пароль користувача в параметр password, перевіряє його на збіг з паролем адміністратора у змінній ADMIN_PASSWORD і повертає повідомлення про результат порівняння, яке зберігається у змінній message.
 
@@ -407,7 +393,7 @@ console.log("Task18")
 //   return message;
 // }
 
-console.log("Task19")
+console.log('Task19');
 
 // Функція checkStorage(available, ordered) перевіряє можливість оформлення замовлення і повертає повідомлення про результат. Вона оголошує два параметри, значення яких будуть задаватися під час її виклику.
 
@@ -425,7 +411,7 @@ console.log("Task19")
 // Виклик checkStorage(200, 20) повертає "The order is accepted, our manager will contact you"
 // Виклик checkStorage(200, 250) повертає "Your order is too large, there are not enough items in stock!"
 // Виклик checkStorage(150, 0) повертає "There are no products in the order!"
-function checkStorage(available, ordered) {
+// function checkStorage(available, ordered) {
 //   let message;
 //   // Change code below this line
 
@@ -433,8 +419,7 @@ function checkStorage(available, ordered) {
 //   return message;
 // }
 
-
-console.log("Task20")
+console.log('Task20');
 
 // Функція isNumberInRange(start, end, number) перевіряє, чи входить число у проміжок. Вона оголошує три параметри, значення яких будуть задаватися під час її виклику:
 
@@ -456,7 +441,7 @@ console.log("Task20")
 //   return isInRange;
 // }
 
-console.log("Task21")
+console.log('Task21');
 
 // Функція checkIfCanAccessContent(subType) перевіряє, чи може користувач отримати доступ до контенту. Перевірка відбувається за типом передплати. Отримати доступ можуть тільки користувачі з передплатою pro або vip.
 
@@ -475,7 +460,7 @@ console.log("Task21")
 //   return canAccessContent;
 // }
 
-console.log("Task22")
+console.log('Task22');
 
 // Функція isNumberNotInRange(start, end, number) перевіряє, чи не входить число у проміжок. Тобто число повинно бути меншим або дорівнювати start і більшим або дорівнювати end. Результатом виразу перевірки буде буль true або false.
 
@@ -499,7 +484,7 @@ console.log("Task22")
 //   return isNotInRange;
 // }
 
-console.log("Task23")
+console.log('Task23');
 
 // Функція getDiscount(totalSpent) визначає значення знижки, залежно від загальної суми витрачених грошей (параметр totalSpent) в магазині за весь час (партнерська програма). Знижка записується у змінну discount і повертається з функції як результат її роботи.
 
@@ -532,7 +517,7 @@ console.log("Task23")
 //   return discount;
 // }
 
-console.log("Task24")
+console.log('Task24');
 
 // Виконай рефакторинг рішення задачі «Склад товарів», замінивши інструкцію if...else тернарним оператором.
 
@@ -558,8 +543,7 @@ console.log("Task24")
 //   return message;
 // }
 
-
-console.log("Task25")
+console.log('Task25');
 
 // Функція checkPassword(password) порівнює переданий їй пароль (параметр password) зі збереженим паролем адміністратора (константа ADMIN_PASSWORD) і повертає рядок з повідомленням про результат.
 
@@ -582,7 +566,7 @@ console.log("Task25")
 //   return message;
 // }
 
-console.log("Task26")
+console.log('Task26');
 
 // Функція getSubscriptionPrice(type) отримує рядок з типом передплати користувача (параметр type), перевіряє її на збіг з трьома можливими типами щомісячної передплати та повертає ціну, що зберігається у змінній price.
 
@@ -629,7 +613,7 @@ console.log("Task26")
 //   return price;
 // }
 
-console.log("Task27")
+console.log('Task27');
 
 // Функція checkPassword(password) отримує пароль в параметр password, перевіряє його на збіг з паролем адміністратора у змінній ADMIN_PASSWORD і повертає повідомлення про результат порівняння, яке зберігається у змінній message.
 
@@ -663,8 +647,7 @@ console.log("Task27")
 //   return message;
 // }
 
-
-console.log("Task28")
+console.log('Task28');
 
 // Функція getShippingCost(country) повинна перевіряти можливість доставки товару в країну користувача (параметр country) і повертати повідомлення про результат, що зберігається у змінній message. Обов'язково використовуй інструкцію switch.
 
@@ -695,8 +678,7 @@ console.log("Task28")
 //   return message;
 // }
 
-
-console.log("Task29")
+console.log('Task29');
 
 // Функція getNameLength(name) приймає ім'я (параметр name) і повертає рядок, в якому вказана його довжина. Доповни шаблонний рядок у змінній message довжиною рядка з параметра name.
 
@@ -712,8 +694,7 @@ console.log("Task29")
 //   return message;
 // }
 
-
-console.log("Task30")
+console.log('Task30');
 
 // Доповни код, присвоївши оголошеним змінним вирази звертання до відповідних елементів або властивостей рядка у змінній course.
 
@@ -738,8 +719,7 @@ console.log("Task30")
 
 // // Change code above this line
 
-
-console.log("Task31")
+console.log('Task31');
 
 // Функція getSubstring(string, length) приймає рядок і повертає підрядок від початку і до length символів. Вона оголошує два параметри, значення яких будуть задаватися під час її виклику:
 
@@ -760,7 +740,7 @@ console.log("Task31")
 //   return substring;
 // }
 
-console.log("Task32")
+console.log('Task32');
 
 // Функція formatMessage(message, maxLength) приймає рядок (параметр message) і форматує його, якщо довжина перевищує значення в параметрі maxLength.
 
@@ -783,7 +763,7 @@ console.log("Task32")
 //   return result;
 // }
 
-console.log("Task33")
+console.log('Task33');
 
 // Функція normalizeInput(input) приймає рядок (параметр input) і повертає такий самий рядок, але в нижньому регістрі. Присвой змінній normalizedInput вираз створення рядка у нижньому регістрі з параметра input.
 
@@ -798,9 +778,7 @@ console.log("Task33")
 //   return normalizedInput;
 // }
 
-
-console.log("Task34")
-
+console.log('Task34');
 // Функція checkForName(fullname, name) приймає два параметри та повертає буль true або false - результат перевірки входження підрядка name у рядок fullname.
 
 // fullname - повне ім'я, що складається з двох слів (імені та прізвища), розділених пробілом.
@@ -819,8 +797,8 @@ console.log("Task34")
 //   const result = ; // Change this line
 //    return result;
 //  }
- 
-console.log("Task35")
+
+console.log('Task35');
 
 // Функція checkForSpam(message) приймає рядок (параметр message), перевіряє його на вміст заборонених слів spam і sale, і повертає результат перевірки. Слова в рядку параметра message можуть бути у довільному регістрі, наприклад SPAM або sAlE.
 
@@ -843,4 +821,4 @@ console.log("Task35")
 //   return result;
 // }
 
-console.log("Task36")
+console.log('Task36');

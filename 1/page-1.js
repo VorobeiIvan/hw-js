@@ -13,11 +13,20 @@
 // Оголошена змінна pricePerItem
 // Значення змінної pricePerItem - це число 2000
 
+// Change code below this line
+
+// console.log(productName);
+// 'Droid'
+
+// console.log(pricePerItem);
+// 2000
+
 
 const productName="Droid";
 const pricePerItem = 2000;
 
 console.log("Task1");
+
 console.log('productName =', productName);
 console.log('pricePerItem =', pricePerItem);
 
@@ -29,6 +38,11 @@ console.log('pricePerItem =', pricePerItem);
 // Змінна productName оголошена за допомогою let
 // При оголошенні змінної productName присвоєно значення — рядок "Droid"
 // Змінній productName присвоєно нове значення — рядок "Repair droid"
+// let productName = "Droid";
+// let pricePerItem = 2000;
+
+// // Change code below this line
+
 
 console.log("Task2")
 
@@ -61,6 +75,12 @@ console.log("Task3")
 // Оголошена змінна totalPrice
 // Значення змінної totalPrice - це число 14000
 // Використаний оператор *
+// const pricePerItem = 3500;
+// const orderedQuantity = 4;
+
+// // Change code below this line
+// const totalPrice = pricePerItem;
+
 
 console.log("Task4")
 
@@ -72,6 +92,11 @@ console.log("Task4")
 // Значення змінної price - це число 3500
 // Оголошена змінна message
 // Значення змінної message - це рядок "You picked Droid, price per item is 3500 credits"
+// const productName = "Droid";
+// const pricePerItem = 3500;
+
+// // Change code below this line
+
 
 console.log("Task5")
 
@@ -110,6 +135,15 @@ console.log("Task7")
 // Виклик add(15, 27, 10) виводить у консоль "Addition result equals 52"
 // Виклик add(10, 20, 30) виводить у консоль "Addition result equals 60"
 // Виклик add(5, 10, 15) виводить у консоль "Addition result equals 30"
+// Change code below this line
+// function add() {
+//   console.log();
+//   // Change code above this line
+// }
+
+// add(15, 27, 10);
+// add(10, 20, 30);
+// add(5, 10, 15);
 
 console.log("Task8")
 
@@ -121,6 +155,19 @@ console.log("Task8")
 // Виклик add(10, 20, 30) повертає 60
 // Виклик add(5, 10, 15) повертає 30
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+// function add(a, b, c) {
+//   // Change code below this line
+
+
+
+//   // Change code above this line
+// }
+
+// add(2, 5, 8); // 15
+
+// console.log(add(15, 27, 10));
+// console.log(add(10, 20, 30));
+// console.log(add(5, 10, 15));
 
 console.log("Task9")
 
@@ -138,6 +185,12 @@ console.log("Task9")
 // Виклик makeMessage('Scanner', 3500) повертає "You picked Scanner, price per item is 3500 credits"
 // Виклик makeMessage('Reactor', 8000) повертає "You picked Reactor, price per item is 8000 credits"
 // Виклик makeMessage('Engine', 4070) повертає "You picked Engine, price per item is 4070 credits"
+// function makeMessage (name, price) {
+//   // Change code below this line
+//    const message = ;
+//   // Change code above this line
+//   return message;
+// };
 
 console.log("Task10")
 
@@ -154,6 +207,13 @@ console.log("Task10")
 // Виклик calculateTotalPrice(1, 3500) повертає 3500
 // Виклик calculateTotalPrice(12, 70) повертає 840
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+// function calculateTotalPrice (orderedQuantity, pricePerItem) {
+//   // Change code below this line
+//   const totalPrice = ;
+
+//   // Change code above this line
+//   return totalPrice;
+// };
 
 console.log("Task11")
 
@@ -168,6 +228,14 @@ console.log("Task11")
 // Виклик makeOrderMessage(2, 100, 50) повертає "You ordered droids worth 250 credits. Delivery (50 credits) is included in total price."
 // Виклик makeOrderMessage(4, 300, 100) повертає "You ordered droids worth 1300 credits. Delivery (100 credits) is included in total price."
 // Виклик makeOrderMessage(10, 70, 200) повертає "You ordered droids worth 900 credits. Delivery (200 credits) is included in total price."
+// function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
+//   // Change code below this line
+
+
+
+//   // Change code above this line
+//   return message;
+// }
 
 console.log("Task12")
 
@@ -179,6 +247,13 @@ console.log("Task12")
 // Виклик isAdult(14) повертає false
 // Виклик isAdult(8) повертає false
 // Виклик isAdult(37) повертає true
+// function isAdult(age) {
+//   // Change code below this line
+//   const passed = ;
+
+//   // Change code above this line
+//   return passed;
+// }
 
 console.log("Task13")
 
@@ -191,6 +266,14 @@ console.log("Task13")
 // Виклик isValidPassword("mangodab3st") повертає false
 // Виклик isValidPassword("kiwirul3z") повертає false
 // Виклик isValidPassword("jqueryismyjam") повертає true
+// function isValidPassword(password) {
+//   const SAVED_PASSWORD = 'jqueryismyjam';
+//   // Change code below this line
+//   const isMatch = ;
+
+//   // Change code above this line
+//   return isMatch;
+// }
 
 console.log("Task14")
 
@@ -204,6 +287,17 @@ console.log("Task14")
 // Виклик checkAge(8) повертає "You are a minor"
 // Виклик checkAge(14) повертає "You are a minor"
 // Виклик checkAge(38) повертає "You are an adult"
+// function checkAge(age) {
+//   let message;
+
+//   if () { // Change this line
+//     message = 'You are an adult';
+//   } else {
+//     message = 'You are a minor';
+//   }
+
+//   return message;
+// }
 
 console.log("Task15")
 
@@ -221,6 +315,14 @@ console.log("Task15")
 // Виклик checkStorage(200, 20) повертає "Order is processed, our manager will contact you."
 // Виклик checkStorage(200, 150) повертає "Order is processed, our manager will contact you."
 // Виклик checkStorage(150, 180) повертає "Not enough goods in stock!"
+// function checkStorage(available, ordered) {
+//   let message;
+//   // Change code below this line
+
+//   // Change code above this line
+//   return message;
+// }
+
 
 console.log("Task16")
 
@@ -235,10 +337,17 @@ console.log("Task16")
 // Значення змінної d дорівнює 2
 // Використаний оператор /=
 
-let a = 5;
-let b = 10;
-let c = 15;
-let d = 20;
+// let a = 5;
+// let b = 10;
+// let c = 15;
+// let d = 20;
+
+// // Change code below this line
+// a = a + 2;
+// b = b - 4;
+// c = c * 3;
+// d = d / 10;
+
 
 console.log("Task17")
 
@@ -262,6 +371,15 @@ console.log("Task17")
 // Виклик makeTransaction(2000, 8, 10000) повертає "Insufficient funds!"
 // Виклик makeTransaction(500, 10, 5000) повертає "You ordered 10 droids, you have 0 credits left"
 
+// function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
+//   let message;
+//   // Change code below this line
+
+//   // Change code above this line
+//   return message;
+// }
+
+
 console.log("Task18")
 
 // Функція checkPassword(password) отримує пароль користувача в параметр password, перевіряє його на збіг з паролем адміністратора у змінній ADMIN_PASSWORD і повертає повідомлення про результат порівняння, яке зберігається у змінній message.
@@ -274,6 +392,20 @@ console.log("Task18")
 // Виклик checkPassword(null) повертає "Canceled by user!"
 // Виклик checkPassword("polyhax") повертає "Access denied, wrong password!"
 // Виклик checkPassword("jqueryismyjam") повертає "Welcome!"
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = 'jqueryismyjam';
+//   let message;
+
+//   if () { // Change this line
+//     message =  'Canceled by user!';
+//   } else if () { // Change this line
+//     message = 'Welcome!';
+//   } else {
+//     message = 'Access denied, wrong password!';
+//   }
+
+//   return message;
+// }
 
 console.log("Task19")
 
@@ -293,6 +425,14 @@ console.log("Task19")
 // Виклик checkStorage(200, 20) повертає "The order is accepted, our manager will contact you"
 // Виклик checkStorage(200, 250) повертає "Your order is too large, there are not enough items in stock!"
 // Виклик checkStorage(150, 0) повертає "There are no products in the order!"
+function checkStorage(available, ordered) {
+//   let message;
+//   // Change code below this line
+
+//   // Change code above this line
+//   return message;
+// }
+
 
 console.log("Task20")
 
@@ -310,6 +450,12 @@ console.log("Task20")
 // Виклик isNumberInRange(20, 50, 24) повертає true
 // Виклик isNumberInRange(20, 50, 76) повертає false
 
+// function isNumberInRange(start, end, number) {
+//   const isInRange = ; // Change this line
+
+//   return isInRange;
+// }
+
 console.log("Task21")
 
 // Функція checkIfCanAccessContent(subType) перевіряє, чи може користувач отримати доступ до контенту. Перевірка відбувається за типом передплати. Отримати доступ можуть тільки користувачі з передплатою pro або vip.
@@ -322,6 +468,12 @@ console.log("Task21")
 // Виклик checkIfCanAccessContent("starter") повертає false
 // Виклик checkIfCanAccessContent("vip") повертає true
 // Виклик checkIfCanAccessContent("free") повертає false
+
+// function checkIfCanAccessContent(subType) {
+//   const canAccessContent = ; // Change this line
+
+//   return canAccessContent;
+// }
 
 console.log("Task22")
 
@@ -340,6 +492,12 @@ console.log("Task22")
 // Виклик isNumberNotInRange(10, 30, 5) повертає true
 // Виклик isNumberNotInRange(20, 50, 24) повертає false
 // Виклик isNumberNotInRange(20, 50, 76) повертає true
+// function isNumberNotInRange(start, end, number) {
+//   const isInRange = number >= start && number <= end;
+//   const isNotInRange = ; // Change this line
+
+//   return isNotInRange;
+// }
 
 console.log("Task23")
 
@@ -362,6 +520,18 @@ console.log("Task23")
 // Виклик getDiscount(20000) повертає 0.05
 // Виклик getDiscount(50000) повертає 0.1
 
+// function getDiscount(totalSpent) {
+//   const BASE_DISCOUNT = 0;
+//   const BRONZE_DISCOUNT = 0.02;
+//   const SILVER_DISCOUNT = 0.05;
+//   const GOLD_DISCOUNT = 0.1;
+//   let discount;
+//   // Change code below this line
+
+//   // Change code above this line
+//   return discount;
+// }
+
 console.log("Task24")
 
 // Виконай рефакторинг рішення задачі «Склад товарів», замінивши інструкцію if...else тернарним оператором.
@@ -374,19 +544,20 @@ console.log("Task24")
 // Виклик checkStorage(200, 150) повертає "The order is accepted, our manager will contact you"
 // Виклик checkStorage(150, 180) повертає "Not enough goods in stock!"
 
-function checkStorage(available, ordered) {
-  let message;
-  // Change code below this line
+// function checkStorage(available, ordered) {
+//   let message;
+//   // Change code below this line
 
-  if (ordered > available) {
-    message = "Not enough goods in stock!";
-  } else {
-    message = "The order is accepted, our manager will contact you";
-  }
+//   if (ordered > available) {
+//     message = "Not enough goods in stock!";
+//   } else {
+//     message = "The order is accepted, our manager will contact you";
+//   }
 
-  // Change code above this line
-  return message;
-}
+//   // Change code above this line
+//   return message;
+// }
+
 
 console.log("Task25")
 
@@ -401,6 +572,15 @@ console.log("Task25")
 // Виклик checkPassword("jqueryismyjam") повертає "Access is allowed"
 // Виклик checkPassword("angul4r1sl1f3") повертає "Access denied, wrong password!"
 // Виклик checkPassword("r3actsux") повертає "Access denied, wrong password!"
+
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = "jqueryismyjam";
+//   let message;
+//   // Change code below this line
+
+//   // Change code above this line
+//   return message;
+// }
 
 console.log("Task26")
 
@@ -427,6 +607,28 @@ console.log("Task26")
 // Виклик getSubscriptionPrice("organization") повертає число 50
 // Виклик getSubscriptionPrice("starter") повертає число 0
 
+// function getSubscriptionPrice(type) {
+//   let price;
+//   // Change code below this line
+
+//  switch () { // Change this line
+//     case : // Change this line
+//       price = ; // Change this line
+//       break;
+
+//     case : // Change this line
+//       price = ; // Change this line
+//       break;
+
+//     case : // Change this line
+//       price = ; // Change this line
+//       break;
+//   }
+
+//   // Change code above this line
+//   return price;
+// }
+
 console.log("Task27")
 
 // Функція checkPassword(password) отримує пароль в параметр password, перевіряє його на збіг з паролем адміністратора у змінній ADMIN_PASSWORD і повертає повідомлення про результат порівняння, яке зберігається у змінній message.
@@ -443,6 +645,24 @@ console.log("Task27")
 // Виклик checkPassword(null) повертає "Canceled by user!"
 // Виклик checkPassword("polyhax") повертає "Access denied, wrong password!"
 // Виклик checkPassword("jqueryismyjam") повертає "Welcome!"
+
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = "jqueryismyjam";
+//   let message;
+//   // Change code below this line
+
+//   if (password === null) {
+//     message = "Canceled by user!";
+//   } else if (password === ADMIN_PASSWORD) {
+//     message = "Welcome!";
+//   } else {
+//     message = "Access denied, wrong password!";
+//   }
+
+//   // Change code above this line
+//   return message;
+// }
+
 
 console.log("Task28")
 
@@ -467,6 +687,15 @@ console.log("Task28")
 // Виклик getShippingCost("Jamaica") повертає "Shipping to Jamaica will cost 120 credits"
 // Виклик getShippingCost("Sweden") повертає "Sorry, there is no delivery to your country"
 
+// function getShippingCost(country) {
+//   let message;
+//   // Change code below this line
+
+//   // Change code above this line
+//   return message;
+// }
+
+
 console.log("Task29")
 
 // Функція getNameLength(name) приймає ім'я (параметр name) і повертає рядок, в якому вказана його довжина. Доповни шаблонний рядок у змінній message довжиною рядка з параметра name.
@@ -476,6 +705,13 @@ console.log("Task29")
 // Виклик функції getNameLength("Harambe") повертає "Name Harambe is 6 characters long"
 // Виклик функції getNameLength("Billy") повертає "Name Billy is 5 characters long"
 // Виклик функції getNameLength("Joe") повертає "Name Joe is 3 characters long"
+
+// function getNameLength(name) {
+//   const message = `Name ${} is ${} characters long`; // Change this line
+
+//   return message;
+// }
+
 
 console.log("Task30")
 
@@ -493,14 +729,14 @@ console.log("Task30")
 // Оголошена змінна lastElement
 // Значення змінної lastElement - це рядок "s"
 
-const courseTopic = "JavaScript essentials";
-// Change code below this line
+// const courseTopic = "JavaScript essentials";
+// // Change code below this line
 
-const courseTopicLength = courseTopic;
-const firstElement = courseTopic;
-const lastElement = courseTopic;
+// const courseTopicLength = courseTopic;
+// const firstElement = courseTopic;
+// const lastElement = courseTopic;
 
-// Change code above this line
+// // Change code above this line
 
 
 console.log("Task31")
@@ -518,6 +754,12 @@ console.log("Task31")
 // Виклик функції getSubstring("Hello world", 11) повертає "Hello world"
 // Виклик функції getSubstring("Hello world", 0) повертає ""
 
+// function getSubstring(string, length) {
+//   const substring = ; // Change this line
+
+//   return substring;
+// }
+
 console.log("Task32")
 
 // Функція formatMessage(message, maxLength) приймає рядок (параметр message) і форматує його, якщо довжина перевищує значення в параметрі maxLength.
@@ -533,6 +775,13 @@ console.log("Task32")
 // Виклик функції formatMessage("Vestibulum facilisis purus nec", 30) повертає "Vestibulum facilisis purus nec"
 // Виклик функції formatMessage("Nunc sed turpis a felis in nunc fringilla", 15) повертає "Nunc sed turpis..."
 // Виклик функції formatMessage("Nunc sed turpis a felis in nunc fringilla", 41) повертає "Nunc sed turpis a felis in nunc fringilla"
+// function formatMessage(message, maxLength) {
+//   let result;
+//   // Change code below this line
+
+//   /// Change code above this line
+//   return result;
+// }
 
 console.log("Task33")
 
@@ -542,6 +791,13 @@ console.log("Task33")
 // Виклик функції normalizeInput("Hello world") повертає "hello world"
 // Виклик функції normalizeInput("This ISN'T SpaM") повертає "this isn't spam"
 // Виклик функції normalizeInput("Big SALE") повертає "big sale"
+
+// function normalizeInput(input) {
+//   const normalizedInput = ; // Change this line
+
+//   return normalizedInput;
+// }
+
 
 console.log("Task34")
 
@@ -559,7 +815,11 @@ console.log("Task34")
 // Виклик функції checkForName("Vadim Nekrasov", "Vadim") повертає true
 // Виклик функції checkForName("Vadim Nekrasov", "vadim") повертає false
 // Виклик функції checkForName("Vadim Nekrasov", "Dima") повертає false
-
+// function checkForName(fullName, name) {
+//   const result = ; // Change this line
+//    return result;
+//  }
+ 
 console.log("Task35")
 
 // Функція checkForSpam(message) приймає рядок (параметр message), перевіряє його на вміст заборонених слів spam і sale, і повертає результат перевірки. Слова в рядку параметра message можуть бути у довільному регістрі, наприклад SPAM або sAlE.
@@ -574,5 +834,13 @@ console.log("Task35")
 // Виклик функції checkForSpam("Trust me, this is not a spam message") повертає true
 // Виклик функції checkForSpam("Get rid of sPaM emails. Our book in on sale!") повертає true
 // Виклик функції checkForSpam("[SPAM] How to earn fast money?") повертає true
+
+// function checkForSpam(message) {
+//   let result;
+//   // Change code below this line
+
+//   // Change code above this line
+//   return result;
+// }
 
 console.log("Task36")

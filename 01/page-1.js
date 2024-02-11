@@ -1266,6 +1266,5 @@ function checkForSpam(message) {
   let result =
     message.toLowerCase().includes('spam') ||
     message.toLowerCase().includes('sale');
-  console.log(message.toLowerCase());
   return result;
 }

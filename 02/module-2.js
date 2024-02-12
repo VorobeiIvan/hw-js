@@ -82,7 +82,7 @@ console.log(fruits); // - це масив ["apple", "plum", "pear", "orange"]
 
 //   Оголоси три змінні і присвой кожній з них значення, використовуючи нотацію квадратних дужок.
 // Ім'я змінної	Значення змінної
-console.log('Task5');
+console.log('%cTask5', 'font-weight: bold');
 const firstElement = fruits[0]; //перший елемент масиву
 const secondElement = fruits[1]; //другий елемент масиву
 let lastElement = fruits[fruits.length - 1]; //останній елемент масиву
@@ -95,7 +95,7 @@ console.log(lastElement); // - це рядок "orange"
 
 // Виконай перевизначення значення елементів з індексами 1 і 3. Заміни "plum" на "peach", а "orange" на "banana".
 // Оголошена змінна fruits
-console.log('Task6');
+console.log('%cTask6', 'font-weight: bold');
 fruits[1] = 'peach';
 fruits[3] = 'banana';
 
@@ -103,7 +103,7 @@ console.log(fruits); // - це масив ["apple", "peach", "pear", "banana"]
 
 // Оголоси змінну fruitsArrayLength і присвой їй довжину масиву fruits, використовуючи властивість length.
 // Оголошена змінна fruitsArrayLength
-console.log('Task7');
+console.log('%cTask7', 'font-weight: bold');
 
 function fruitsArrayLength() {
   return fruits.length;
@@ -114,7 +114,7 @@ console.log(fruitsArrayLength()); // - це число 4
 
 // Ім'я змінної	Очікуване значення
 
-console.log('Task8');
+console.log('%cTask8', 'font-weight: bold');
 const lastElementIndex = fruits.length - 1; //Індекс останнього елемента масиву fruits через довжина_масиву - 1
 lastElement = fruits[fruits.length - 1]; // Значення останнього елемента масиву
 // Оголошена змінна lastElementIndex
@@ -125,7 +125,7 @@ console.log(lastElement); //  - це рядок "banana"
 // Напиши функцію getExtremeElements(array), яка приймає один параметр array - масив елементів довільної довжини. Функція повинна повертати масив з двох елементів - першого і останнього елемента параметра array.
 
 // Оголошена функція getExtremeElements(array)
-console.log('Task9');
+console.log('%cTask9', 'font-weight: bold');
 console.log(getExtremeElements([1, 2, 3, 4, 5])); //  повертає [1, 5]
 console.log(getExtremeElements(['Earth', 'Mars', 'Venus'])); //  повертає ["Earth", "Venus"]
 console.log(getExtremeElements(['apple', 'peach', 'pear', 'banana'])); //  повертає ["apple", "banana"]
@@ -136,7 +136,7 @@ function getExtremeElements(array) {
 
 //   Доповни код функції splitMessage(message, delimiter) таким чином, щоб вона повертала у змінній words результат поділу рядка message за роздільником delimiter - масив рядків.
 // Оголошена функція splitMessage(message, delimiter)
-console.log('Task10');
+console.log('%cTask10', 'font-weight: bold');
 console.log(splitMessage('Mango hurries to the train', ' ')); //  повертає ["Mango", "hurries", "to", "the", "train"]
 console.log(splitMessage('Mango', '')); //  повертає ["M", "a", "n", "g", "o"]
 console.log(splitMessage('best_for_week', '_')); //  повертає ["best", "for", "week"]
@@ -153,7 +153,7 @@ function splitMessage(message, delimiter) {
 // Напиши тіло функції, щоб вона повертала загальну вартість гравірування усіх слів в рядку.
 
 // Оголошена функція calculateEngravingPrice(message, pricePerWord)
-console.log('Task11');
+console.log('%cTask11', 'font-weight: bold');
 console.log(calculateEngravingPrice('JavaScript is in my blood', 10)); //  повертає 50
 console.log(calculateEngravingPrice('JavaScript is in my blood', 20)); // повертає 100
 console.log(calculateEngravingPrice('Web-development is creative work', 40)); //  повертає 160
@@ -168,7 +168,7 @@ function calculateEngravingPrice(message, pricePerWord) {
 //  Доповни код функції makeStringFromArray(array, delimiter) таким чином, щоб вона повертала у змінній string результат з'єднання елементів масиву array з роздільником delimiter - рядок.
 
 // Оголошена функція makeStringFromArray(array, delimiter)
-console.log('Task12');
+console.log('%cTask12', 'font-weight: bold');
 console.log(
   makeStringFromArray(['Mango', 'hurries', 'to', 'the', 'train'], ' ')
 ); // повертає "Mango hurries to the train"
@@ -194,7 +194,7 @@ function makeStringFromArray(array, delimiter) {
 // Усі символи slug повинні бути у нижньому регістрі
 // Всі слова slug повинні бути розділені тире
 // Оголошена функція slugify(title)
-console.log('Task13');
+console.log('%cTask13', 'font-weight: bold');
 console.log(slugify('Arrays for begginers')); //  повертає "arrays-for-begginers"
 console.log(slugify('English for developer')); // повертає "english-for-developer"
 console.log(slugify('Ten secrets of JavaScript')); //  повертає "ten-secrets-of-javascript"
@@ -211,7 +211,7 @@ function slugify(title) {
 //  nonExtremeEls - масив з усіх елементів, крім першого та останнього
 //  lastThreeEls - масив із трьох останніх елементів
 //  Оголошена змінна fruits
-console.log('Task14');
+console.log('%cTask14', 'font-weight: bold');
 
 fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
 
@@ -234,6 +234,12 @@ console.log(lastThreeEls); //  - це масив ["pear", "orange", "banana"]
 //  Доповни код таким чином, щоб у змінній allClients утворився масив усіх елементів масивів oldClients і newClients.
 
 //  Оголошена змінна oldClients
+console.log('Task15');
+const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
+const newClients = ['Peach', 'Houston'];
+
+ const allClients =oldClients.concat(newClients) ; // Change this line
+
 console.log(oldClients); //  - це масив ["Mango", "Ajax", "Poly", "Kiwi"]
 //  Оголошена змінна newClients
 console.log(newClients); //  - це масив ["Peach", "Houston"]
@@ -241,17 +247,20 @@ console.log(newClients); //  - це масив ["Peach", "Houston"]
 console.log(allClients); //  - це масив ["Mango", "Ajax", "Poly", "Kiwi", "Peach", "Houston"]
 //  Змінній allClients присвоєний масив після застосування методу concat з правильними аргументами
 
-const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
-const newClients = ['Peach', 'Houston'];
 
-//  const allClients = ; // Change this line
-
-console.log('Task15');
 
 //  Напиши функцію makeArray(firstArray, secondArray, maxLength) для створення нового масиву з усіма елементами двох вихідних firstArray і secondArray. Параметр maxLength містить максимально допустиму довжину нового масиву.
 
 // Якщо кількість елементів нового масиву більша за maxLength, функція повинна повернути копію масиву довжиною maxLength елементів. В іншому випадку функція повинна повернути новий масив повністю.
 
+function makeArray(firstArray, secondArray, maxLength) {
+// let allClients=firstArray.concat(secondArray);
+// let newArrey = allClients.splice(0,maxLength)
+// return newArrey
+return [...firstArray,...secondArray].splice(0,maxLength)
+}
+
+console.log('Task16');
 // Оголошена функція makeArray(firstArray, secondArray, maxLength)
 console.log(makeArray(['Mango', 'Poly'], ['Ajax', 'Chelsea'], 3)); //  повертає ["Mango", "Poly", "Ajax"]
 console.log(makeArray(['Mango', 'Poly', 'Houston'], ['Ajax', 'Chelsea'], 4)); //  повертає ["Mango", "Poly", "Houston", "Ajax"]
@@ -260,12 +269,9 @@ console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 2)); //  по
 console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 4)); // повертає ["Earth", "Jupiter", "Neptune", "Uranus"]
 console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus', 'Venus'], 0)); //  повертає []
 // Виклик функції makeArray() з випадковими масивами і випадковим числом повертає правильний масив
-function makeArray(firstArray, secondArray, maxLength) {
-  // Change code below this line
-  // Change code above this line
-}
 
-console.log('Task16');
+
+
 
 //  Доповни цикл for таким чином, щоб він логував всі цілі числа в діапазоні від start до end включно.
 

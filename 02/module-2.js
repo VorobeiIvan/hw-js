@@ -201,8 +201,8 @@ console.log(slugify('Ten secrets of JavaScript')); //  повертає "ten-sec
 console.log(slugify('How to become a JUNIOR developer in TWO WEEKS')); //  повертає "how-to-become-a-junior-developer-in-two-weeks"
 
 function slugify(title) {
-  let slug=title.toLowerCase().split(' ').join("-");
-  return slug
+  let slug = title.toLowerCase().split(' ').join('-');
+  return slug;
 }
 
 //  Доповни код таким чином, щоб змінні містили часткові копії вихідного масиву fruits.
@@ -215,9 +215,9 @@ console.log('%cTask14', 'font-weight: bold');
 
 fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
 
-const firstTwoEls = fruits.slice(0,2);
-const nonExtremeEls = fruits.slice(1,fruits.length-1);
-const lastThreeEls = fruits.slice(fruits.length-3);
+const firstTwoEls = fruits.slice(0, 2);
+const nonExtremeEls = fruits.slice(1, fruits.length - 1);
+const lastThreeEls = fruits.slice(fruits.length - 3);
 
 console.log(fruits); //  - це масив ["apple", "plum", "pear", "orange", "banana"]
 //  Оголошена змінна firstTwoEls
@@ -228,17 +228,14 @@ console.log(nonExtremeEls); //  - це масив ["plum", "pear", "orange"]
 console.log(lastThreeEls); //  - це масив ["pear", "orange", "banana"]
 //  Змінній lastThreeEls присвоєна копія частини масиву fruits після застосування методу slice з правильними аргументами
 
-
-
-
 //  Доповни код таким чином, щоб у змінній allClients утворився масив усіх елементів масивів oldClients і newClients.
 
 //  Оголошена змінна oldClients
-console.log('Task15');
+console.log('%cTask15', 'font-weight: bold');
 const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
 const newClients = ['Peach', 'Houston'];
 
- const allClients =oldClients.concat(newClients) ; // Change this line
+const allClients = oldClients.concat(newClients); // Change this line
 
 console.log(oldClients); //  - це масив ["Mango", "Ajax", "Poly", "Kiwi"]
 //  Оголошена змінна newClients
@@ -247,20 +244,18 @@ console.log(newClients); //  - це масив ["Peach", "Houston"]
 console.log(allClients); //  - це масив ["Mango", "Ajax", "Poly", "Kiwi", "Peach", "Houston"]
 //  Змінній allClients присвоєний масив після застосування методу concat з правильними аргументами
 
-
-
 //  Напиши функцію makeArray(firstArray, secondArray, maxLength) для створення нового масиву з усіма елементами двох вихідних firstArray і secondArray. Параметр maxLength містить максимально допустиму довжину нового масиву.
 
 // Якщо кількість елементів нового масиву більша за maxLength, функція повинна повернути копію масиву довжиною maxLength елементів. В іншому випадку функція повинна повернути новий масив повністю.
 
 function makeArray(firstArray, secondArray, maxLength) {
-// let allClients=firstArray.concat(secondArray);
-// let newArrey = allClients.splice(0,maxLength)
-// return newArrey
-return [...firstArray,...secondArray].splice(0,maxLength)
+  // let allClients=firstArray.concat(secondArray);
+  // let newArrey = allClients.splice(0,maxLength)
+  // return newArrey
+  return [...firstArray, ...secondArray].splice(0, maxLength);
 }
 
-console.log('Task16');
+console.log('%cTask16', 'font-weight: bold');
 // Оголошена функція makeArray(firstArray, secondArray, maxLength)
 console.log(makeArray(['Mango', 'Poly'], ['Ajax', 'Chelsea'], 3)); //  повертає ["Mango", "Poly", "Ajax"]
 console.log(makeArray(['Mango', 'Poly', 'Houston'], ['Ajax', 'Chelsea'], 4)); //  повертає ["Mango", "Poly", "Houston", "Ajax"]
@@ -269,9 +264,6 @@ console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 2)); //  по
 console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 4)); // повертає ["Earth", "Jupiter", "Neptune", "Uranus"]
 console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus', 'Venus'], 0)); //  повертає []
 // Виклик функції makeArray() з випадковими масивами і випадковим числом повертає правильний масив
-
-
-
 
 //  Доповни цикл for таким чином, щоб він логував всі цілі числа в діапазоні від start до end включно.
 
@@ -284,19 +276,19 @@ console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus', 'Venus'], 0));
 // Умова циклу приводиться до true доти, доки i менше або дорівнює 7
 // На кожній ітерації значення змінної i збільшується на одиницю
 // Виведення у консоль змінної i покаже числа 3, 4, 5, 6, 7
+console.log('%cTask17', 'font-weight: bold');
 
 let start = 3;
 let end = 7;
 
-// for (let i = ; i <= ; i += ) { // Change this line
-//   console.log(i);
-// }
-
-console.log('Task17');
+for (let i = start; i <= end; i += 1) {
+  console.log(i);
+}
 
 //  Напиши функцію calculateTotal(number), яка приймає ціле число (параметр number) і повертає суму всіх цілих чисел від одиниці і до цього числа. Наприклад, якщо number дорівнює 3, то сума - це 1 + 2 + 3, тобто 6.
 
 // Оголошена функція calculateTotal(number)
+console.log('Task18');
 console.log(calculateTotal(1)); //  повертає 1
 console.log(calculateTotal(3)); //  повертає 6
 console.log(calculateTotal(7)); //  повертає 28
@@ -304,11 +296,12 @@ console.log(calculateTotal(18)); //  повертає 171
 console.log(calculateTotal(24)); //  повертає 300
 // Виклик функції calculateTotal() з випадковим числом повертає правильне значення
 function calculateTotal(number) {
-  // Change code below this line
-  // Change code above this line
+  let total = 0;
+  for (let i = 0; i <= number; i += 1) {
+    total += i;
+  }
+  return total;
 }
-
-console.log('Task18');
 
 //  Доповни код циклу for таким чином, щоб він послідовно логував усі елементи масиву fruits.
 
@@ -321,71 +314,96 @@ console.log('Task18');
 //  В тілі циклу for оголошується змінна const fruit і цій змінній присвоюється значення - елемент масиву
 //  В тілі циклу for використовується виведення у консоль змінної fruit
 
+console.log('Task19');
 fruits = ['apple', 'plum', 'pear', 'orange'];
 
-// for (let i = ;) { // Change this line
-//   const fruit = fruits[]; // Change this line
-//   console.log(fruit);
-// }
-
-console.log('Task19');
+for (let i = 0; i < fruits.length; i++) {
+  const fruit = fruits[i];
+  console.log(fruit);
+}
 
 //  Напиши функцію calculateTotalPrice(order), яка приймає один параметр order - масив чисел, і обчислює загальну суму його елементів. Загальна сума елементів повинна зберігатися у змінній total, яка повертається як результат роботи функції.
 
 // Оголошена функція calculateTotalPrice(order)
+console.log('Task20');
 console.log(calculateTotalPrice([12, 85, 37, 4])); //  повертає 138
 console.log(calculateTotalPrice([164, 48, 291])); // повертає 503
 console.log(calculateTotalPrice([412, 371, 94, 63, 176])); //  повертає 1116
 // Виклик функції calculateTotalPrice() з випадковим масивом повертає правильне значення
 function calculateTotalPrice(order) {
   let total = 0;
-  // Change code below this line
-
-  // Change code above this line
+  for (let i = 0; i < order.length; i++) {
+    total += order[i];
+  }
   return total;
 }
 
-console.log('Task20');
 //  Напиши функцію findLongestWord(string), яка приймає довільний рядок, що складається тільки зі слів, розділених пробілом (параметр string), і повертає найдовше слово в цьому рядку.
 
 // Оголошена функція findLongestWord(string)
-console.log(findLongestWord('The quick brown fox jumped over the lazy dog')); //  повертає jumped
-console.log(findLongestWord('Google do a roll')); //  повертає Google
-
-console.log(findLongestWord('May the force be with you')); // повертає force
-// Виклик функції findLongestWord() з випадковим рядком повертає правильне значення
-
-function findLongestWord(string) {
-  // Change code below this line
-  // Change code above this line
-}
-
 console.log('Task21');
 
-//  Доповни код функції createArrayOfNumbers(min, max) таким чином, щоб вона повертала масив усіх цілих чисел від значення min до max.
+function findLongestWord(string) {
+  const wordsArray = string.split(" ");
+  let maxWord = "";
 
+  for (let i = 0; i < wordsArray.length; i++) {
+    let word = wordsArray[i];
+
+    if (word.length > maxWord.length) {
+      maxWord = word;
+    }
+  }
+
+  return maxWord;
+}
+
+console.log(findLongestWord('The quick brown fox jumped over the lazy dog')); //  повертає jumped
+console.log(findLongestWord('Google do a roll')); //  повертає Google
+console.log(findLongestWord('May the force be with you')); // повертає force
+
+
+
+// Виклик функції findLongestWord() з випадковим рядком повертає правильне значення
+//  Доповни код функції createArrayOfNumbers(min, max) таким чином, щоб вона повертала масив усіх цілих чисел від значення min до max.
 // Оголошена функція createArrayOfNumbers(min, max)
 
-console.log(createArrayOfNumbers(1, 3)); //  повертає [1, 2, 3]
+console.log('Task22');
 
+function createArrayOfNumbers(min, max) {
+  const numbers = [];
+for(let i=min; i<=max; i++){
+  let number= i;
+  numbers.push(number)
+}
+  return numbers;
+}
+console.log(createArrayOfNumbers(1, 3)); //  повертає [1, 2, 3]
 console.log(createArrayOfNumbers(14, 17)); //  повертає [14, 15, 16, 17]
 console.log(createArrayOfNumbers(29, 34)); //  повертає [29, 30, 31, 32, 33, 34]
 // Виклик функції createArrayOfNumbers() з випадковими min і max повертає правильний масив
 // В циклі for використовувався метод push
 
-function createArrayOfNumbers(min, max) {
-  const numbers = [];
-  // Change code below this line
 
-  // Change code above this line
-  return numbers;
-}
-
-console.log('Task22');
 
 //  Напиши функцію filterArray(numbers, value), яка приймає масив чисел (параметр numbers) і повертає новий масив, в якому будуть тільки ті елементи масиву numbers, які більші за значення параметра value (число).
 
 // Оголошена функція filterArray(numbers, value)
+console.log('Task23');
+function filterArray(numbers, value) {
+  const arrayLargerNumber =[];
+
+  for (let index = 0; index < numbers.length; index++) {
+    const number = numbers[index];
+
+    if(number>value){
+      arrayLargerNumber.push(number)
+    }
+    
+  }
+
+  return arrayLargerNumber
+}
 console.log(filterArray([1, 2, 3, 4, 5], 3)); //  повертає [4, 5]
 console.log(filterArray([1, 2, 3, 4, 5], 4)); //  повертає [5]
 console.log(filterArray([1, 2, 3, 4, 5], 5)); //  повертає []
@@ -394,12 +412,7 @@ console.log(filterArray([12, 24, 8, 41, 76], 20)); //  повертає [24, 41,
 //  Виклик функції filterArray з випадковим масивом і числом повертає правильний масив
 // В циклі for використовувався метод push
 
-function filterArray(numbers, value) {
-  // Change code below this line
-  // Change code above this line
-}
 
-console.log('Task23');
 
 // Функція checkFruit(fruit) приймає рядок з назвою фрукта (параметр fruit), і перевіряє, чи присутній такий фрукт в масиві fruits.
 
@@ -408,6 +421,7 @@ console.log('Task23');
 // фрукт присутній в масиві, то функція повертає true;
 // фрукт відсутній в масиві, то функція повертає false.
 // Оголошена функція checkFruit(fruit)
+console.log('Task24');
 console.log(checkFruit('plum')); // повертає true
 console.log(checkFruit('mandarin')); // повертає false
 console.log(checkFruit('pear')); //повертає true
@@ -418,19 +432,15 @@ console.log(checkFruit('apple')); // повертає true
 
 function checkFruit(fruit) {
   const fruits = ['apple', 'plum', 'pear', 'orange'];
-
-  return; // Change this line
+  return fruits.includes(fruit)
 }
 
-console.log('Task24');
 
 // Спільними елементами масивів називають ті елементи, які присутні у всіх масивах.
-
 // Наприклад, у двох масивах [1, 3, 5] і [0, 8, 5, 3] спільними будуть числа 3 і 5, оскільки вони присутні в обох вихідних масивах. А числа 0, 1 і 8 присутні тільки в одному з масивів.
-
 // Напиши функцію getCommonElements(array1, array2), яка отримує два масиви довільної довжини в параметри array1 і array2, і повертає новий масив, що складається з тих елементів, які присутні в обох вихідних масивах.
-
 // Оголошена функція getCommonElements(array1, array2)
+console.log('Task25');
 console.log(getCommonElements([1, 2, 3], [2, 4])); // повертає [2]
 console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19])); // повертає [1, 2]
 console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27])); //повертає [12, 27, 3]
@@ -439,11 +449,24 @@ console.log(getCommonElements([1, 2, 3], [10, 20, 30])); // повертає []
 // Виклик функції getCommonElements() з випадковими двома масивами повертає правильний масив
 // В циклі for використовувалися методи includes і push
 function getCommonElements(array1, array2) {
-  // Change code below this line
-  // Change code above this line
+  const uniqueNumbersArray = []
+for (let index = 0; index < array1.length; index++) {
+  const element1 = array1[index];
+  for (let j = 0; j < array.length; j++) {
+    const element2 = array2[j];
+    
+  }
+  if (element2===element1) {
+    
+  }
+}
+  
+
+
+  return uniqueNumbersArray
+  
 }
 
-console.log('Task25');
 
 // Виконай рефакторинг коду функції calculateTotalPrice(order), замінивши цикл for на for...of.
 
@@ -471,11 +494,11 @@ console.log('Task26');
 // Виконай рефакторинг функції filterArray(numbers, value), замінивши цикл for на for...of.
 
 // Оголошена функція filterArray(numbers, value)
-console.log(filterArray([1, 2, 3, 4, 5], 3)); // повертає [4, 5]
-console.log(filterArray([1, 2, 3, 4, 5], 4)); // повертає [5]
-console.log(filterArray([1, 2, 3, 4, 5], 5)); //повертає []
-console.log(filterArray([12, 24, 8, 41, 76], 38)); //повертає [41, 76]
-console.log(filterArray([12, 24, 8, 41, 76], 20)); // повертає [24, 41, 76]
+// console.log(filterArray([1, 2, 3, 4, 5], 3)); // повертає [4, 5]
+// console.log(filterArray([1, 2, 3, 4, 5], 4)); // повертає [5]
+// console.log(filterArray([1, 2, 3, 4, 5], 5)); //повертає []
+// console.log(filterArray([12, 24, 8, 41, 76], 38)); //повертає [41, 76]
+// console.log(filterArray([12, 24, 8, 41, 76], 20)); // повертає [24, 41, 76]
 // Виклик функції filterArray() з випадковим масивом і числом повертає правильний масив
 // Функція filterArray() використовує цикл for..of
 

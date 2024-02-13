@@ -24,7 +24,7 @@
 
 // const apartment = ;
 
-console.log('Task1');
+console.log('%cTask1', 'color: green; font-weight: bold;');
 
 // Доповни об'єкт квартири властивістю owner, значенням якого буде об'єкт з інформацією про власника. Додай йому наступні властивості:
 
@@ -51,7 +51,7 @@ console.log('Task1');
 //   tags: ["premium", "promoted", "top"],
 // };
 
-console.log('Task2');
+console.log('%cTask2', 'color: green; font-weight: bold;');
 
 // Доповни код, присвоївши оголошеним змінним вирази звернення до відповідних властивостей об'єкта apartment.
 
@@ -86,7 +86,7 @@ console.log('Task2');
 // const aptTags = apartment;
 // // Change code above this line
 
-console.log('Task3');
+console.log('%cTask3', 'color: green; font-weight: bold;');
 
 // Доповни код, присвоївши оголошеним змінним вирази звернення до відповідних властивостей об'єкта apartment.
 
@@ -133,7 +133,7 @@ console.log('Task3');
 // const lastTag = apartment;
 // // Change code above this line
 
-console.log('Task4');
+console.log('%cTask4', 'color: green; font-weight: bold;');
 
 // Доповни код, присвоївши оголошеним змінним вирази звернення до відповідних властивостей об'єкта apartment, використовуючи синтаксис «квадратних дужок».
 
@@ -166,8 +166,7 @@ console.log('Task4');
 // const aptPrice = apartment;
 // const aptTags = apartment;
 // // Change code above this line
-
-console.log('Task5');
+console.log('%cTask5', 'color: green; font-weight: bold;');
 
 // Доповни код, оновивши значення властивостей об'єкта apartment:
 
@@ -197,7 +196,7 @@ console.log('Task5');
 
 // // Change code below this line
 
-console.log('Task6');
+console.log('%cTask6', 'color: green; font-weight: bold;');
 
 // Додай об'єкту apartment кілька нових властивостей:
 
@@ -229,7 +228,7 @@ console.log('Task6');
 
 // // Change code below this line
 
-console.log('Task7');
+console.log('%cTask7', 'color: green; font-weight: bold;');
 
 // Доповни код оголошення об'єкта таким чином, щоб у нього були властивості name, price, image і tags зі значеннями зі змінних з аналогічними іменами. Обов'язково використовуй синтаксис коротких властивостей.
 
@@ -250,7 +249,7 @@ console.log('Task7');
 //   // Change code above this line
 // };
 
-console.log('Task8');
+console.log('%cTask8', 'color: green; font-weight: bold;');
 
 // Доповни код оголошення об'єкта credentials таким чином, щоб в результаті у нього були дві властивості: email і password, імена яких зберігаються у змінних emailInputName і passwordInputName.
 
@@ -272,7 +271,7 @@ console.log('Task8');
 //   // Change code above this line
 // };
 
-console.log('Task9');
+console.log('%cTask9', 'color: green; font-weight: bold;');
 
 // Перебери об'єкт apartment, використовуючи цикл for...in, і запиши в масив keys всі його ключі, а в масив values всі значення його властивостей.
 
@@ -292,7 +291,7 @@ console.log('Task9');
 // const values = [];
 // // Change code below this line
 
-console.log('Task10');
+console.log('%cTask10', 'color: green; font-weight: bold;');
 
 // Виконай рефакторинг рішення попереднього завдання, додавши в цикл for...in перевірку на власну властивість.
 
@@ -324,7 +323,7 @@ console.log('Task10');
 //   // Change code above this line
 // }
 
-console.log('Task11');
+console.log('%cTask11', 'color: green; font-weight: bold;');
 
 // Напиши функцію countProps(object), яка рахує і повертає кількість власних властивостей об'єкта в параметрі object. Використовуй змінну propCount для зберігання кількості властивостей об'єкта.
 
@@ -342,7 +341,7 @@ console.log('Task11');
 //   return propCount;
 // }
 
-console.log('Task12');
+console.log('%cTask12', 'color: green; font-weight: bold;');
 
 // Перебери об'єкт apartment, використовуючи метод Object.keys() і цикл for...of. Запиши у змінну keys масив ключів власних властивостей об'єкта apartment, і додай в масив values всі значення його властивостей.
 
@@ -364,7 +363,7 @@ console.log('Task12');
 // // Change code below this line
 // const keys = apartment;
 
-console.log('Task13');
+console.log('%cTask13', 'color: green; font-weight: bold;');
 
 // Виконай рефакторинг функції countProps(object), використовуючи метод Object.keys() і, можливо, але не обов'язково, цикл for...of.
 
@@ -389,7 +388,7 @@ console.log('Task13');
 //   // Change code above this line
 // }
 
-console.log('Task14');
+console.log('%cTask14', 'color: green; font-weight: bold;');
 
 // Запиши у змінну keys масив ключів власних властивостей об'єкта apartment, а у змінну values - масив всіх значень його властивостей. Використовуй методи Object.keys() і Object.values().
 
@@ -411,7 +410,7 @@ console.log('Task14');
 // const keys = apartment;
 // const values = apartment;
 
-console.log('Task15');
+console.log('%cTask15', 'color: green; font-weight: bold;');
 
 // Напиши функцію countTotalSalary(salaries), яка приймає об'єкт зарплат, де ім'я властивості - це ім'я співробітника, а значення властивості - це зарплата. Функція повинна розрахувати загальну суму зарплат співробітників і повернути її. Використовуй змінну totalSalary для зберігання загальної суми зарплати.
 
@@ -429,7 +428,7 @@ console.log('Task15');
 //   return totalSalary;
 // }
 
-console.log('Task16');
+console.log('%cTask16', 'color: green; font-weight: bold;');
 
 // Перебери масив об'єктів colors, використовуючи цикл for...of. Додай у масив hexColors значення властивостей hex, а в масив rgbColors - значення властивостей rgb з усіх об'єктів масиву colors.
 
@@ -451,7 +450,7 @@ console.log('Task16');
 // const rgbColors = [];
 // // Change code below this line
 
-console.log('Task17');
+console.log('%cTask17', 'color: green; font-weight: bold;');
 
 // Напиши функцію getProductPrice(productName), яка приймає один параметр productName - назва продукту. Функція шукає об'єкт продукту з таким ім'ям (властивість name) в масиві products і повертає його ціну (властивість price). Якщо продукт з такою назвою не знайдений, функція повинна повертати null.
 
@@ -475,7 +474,7 @@ console.log('Task17');
 //   // Change code above this line
 // }
 
-console.log('Task18');
+console.log('%cTask18', 'color: green; font-weight: bold;');
 
 // Напиши функцію getAllPropValues(propName), яка приймає один параметр propName - ім'я (ключ) властивості. Функція повинна повернути масив всіх значень властивості з таким ім'ям з кожного об'єкта в масиві products. Якщо в об'єктах відсутні властивості з таким ім'ям, функція повинна повернути порожній масив.
 
@@ -498,7 +497,7 @@ console.log('Task18');
 //   // Change code above this line
 // }
 
-console.log('Task19');
+console.log('%cTask19', 'color: green; font-weight: bold;');
 
 // Напиши функцію calculateTotalPrice(productName), яка приймає один параметр productName - назва товару. Функція повинна повернути загальну вартість (ціна * кількість) товару з таким ім'ям з масиву products.
 
@@ -522,7 +521,7 @@ console.log('Task19');
 //   // Change code above this line
 // }
 
-console.log('Task20');
+console.log('%cTask20', 'color: green; font-weight: bold;');
 
 // Надійшов триденний прогноз максимальних температур і ми рахуємо середню температуру за три дні (meanTemperature). Заміни оголошення змінних yesterday, today і tomorrow однією операцією деструктуризації властивостей об'єкта highTemperatures.
 
@@ -552,7 +551,7 @@ console.log('Task20');
 // // Change code above this line
 // const meanTemperature = (yesterday + today + tomorrow) / 3;
 
-console.log('Task21');
+console.log('%cTask21', 'color: green; font-weight: bold;');
 
 // У прогнозі максимальних температур також може бути необов'язкова властивість icon - іконка погоди. Заміни оголошення змінних yesterday, today, tomorrow і icon однією операцією деструктуризації властивостей об'єкта highTemperatures. Задай значення за замовчуванням для icon - рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
 
@@ -585,7 +584,7 @@ console.log('Task21');
 // // Change code above this line
 // const meanTemperature = (yesterday + today + tomorrow) / 3;
 
-console.log('Task22');
+console.log('%cTask22', 'color: green; font-weight: bold;');
 
 // Заміни оголошення змінних highYesterday, highToday, highTomorrow і highIcon однією операцією деструктуризації властивостей об'єкта highTemperatures. Задай значення за замовчуванням для highIcon - рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
 
@@ -616,7 +615,7 @@ console.log('Task22');
 // // Change code above this line
 // const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
 
-console.log('Task23');
+console.log('%cTask23', 'color: green; font-weight: bold;');
 
 // Виконай рефакторинг циклу for...of таким чином, щоб в ньому використовувалася деструктуризація об'єкта.
 
@@ -645,7 +644,7 @@ console.log('Task23');
 //   rgbColors.push(color.rgb);
 // }
 
-console.log('Task24');
+console.log('%cTask24', 'color: green; font-weight: bold;');
 
 // Ми отримали прогноз погоди на два дні, з мінімальними і максимальними температурами, а також необов'язковими іконками. Заміни оголошення всіх змінних однією операцією деструктуризації властивостей об'єкта forecast. Задай значення за замовчуванням для іконок, змінних todayIcon і tomorrowIcon - рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
 
@@ -686,7 +685,7 @@ console.log('Task24');
 // const lowTomorrow = forecast.tomorrow.low;
 // const tomorrowIcon = forecast.tomorrow.icon;
 
-console.log('Task25');
+console.log('%cTask25', 'color: green; font-weight: bold;');
 
 // Функція calculateMeanTemperature(forecast) приймає один параметр forecast - об'єкт температур на два дні наступного формату.
 
@@ -716,7 +715,7 @@ console.log('Task25');
 //   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
 // }
 
-console.log('Task26');
+console.log('%cTask26', 'color: green; font-weight: bold;');
 
 // У змінній scores зберігається масив результатів тестування. Використовуючи розподіл і методи Math.max() і Math.min(), доповни код таким чином, щоб у змінній bestScore був найвищий бал, а у worstScore - найнижчий.
 
@@ -734,7 +733,7 @@ console.log('Task26');
 // const bestScore = scores;
 // const worstScore = scores;
 
-console.log('Task27');
+console.log('%cTask27', 'color: green; font-weight: bold;');
 
 // У змінних firstGroupScores, secondGroupScores і thirdGroupScores зберігаються результати тестування окремих груп. Використовуючи розподіл, доповни код таким чином, щоб:
 
@@ -765,7 +764,7 @@ console.log('Task27');
 // const bestScore = allScores;
 // const worstScore = allScores;
 
-console.log('Task28');
+console.log('%cTask28', 'color: green; font-weight: bold;');
 
 // В конструкторі можна створювати нові тести, для яких є налаштування за замовчуванням, які зберігаються у змінній defaultSettings. Під час створення тесту, усі або частину налаштувань можна перевизначити, вони зберігаються у змінній overrideSettings.
 
@@ -799,7 +798,7 @@ console.log('Task28');
 // // Change code below this line
 // const finalSettings = {};
 
-console.log('Task29');
+console.log('%cTask29', 'color: green; font-weight: bold;');
 
 // Напиши функцію makeTask(data) яка приймає один параметр data - об'єкт з наступними властивостями.
 
@@ -826,7 +825,7 @@ console.log('Task29');
 //   // Change code above this line
 // }
 
-console.log('Task30');
+console.log('%cTask30', 'color: green; font-weight: bold;');
 
 // Використовуючи операцію rest, доповни код функції add() таким чином, щоб вона приймала будь-яку кількість аргументів, рахувала і повертала їх суму.
 
@@ -843,7 +842,7 @@ console.log('Task30');
 //   // Change code above this line
 // }
 
-console.log('Task31');
+console.log('%cTask31', 'color: green; font-weight: bold;');
 
 // Функція addOverNum() рахує суму всіх аргументів. Зміни параметри і тіло функції addOverNum() таким чином, щоб вона рахувала суму тільки тих аргументів, які більші за задане число. Це число повинно бути першим параметром функції.
 
@@ -865,7 +864,7 @@ console.log('Task31');
 //   // Change code above this line
 // }
 
-console.log('Task32');
+console.log('%cTask32', 'color: green; font-weight: bold;');
 
 // Функція findMatches() приймає довільну кількість аргументів. Першим аргументом завжди буде масив чисел, а решта аргументів будуть просто числами.
 
@@ -887,7 +886,7 @@ console.log('Task32');
 //   return matches;
 // }
 
-console.log('Task33');
+console.log('%cTask33', 'color: green; font-weight: bold;');
 
 // Додай об'єкту bookShelf ще два методи, які поки що будуть повертати просто рядки за аналогією з getBooks() і addBook(bookName).
 
@@ -927,7 +926,7 @@ console.log('Task33');
 //   // Change code above this line
 // };
 
-console.log('Task34');
+console.log('%cTask34', 'color: green; font-weight: bold;');
 
 // Доповни метод updateBook(oldName, newName) таким чином, щоб він змінював назву книги з oldName на newName у властивості books. Використовуй indexOf() для того, щоб знайти потрібний елемент масиву, і splice() для того, щоб замінити цей елемент.
 
@@ -950,7 +949,7 @@ console.log('Task34');
 //   },
 // };
 
-console.log('Task35');
+console.log('%cTask35', 'color: green; font-weight: bold;');
 
 // До нас звернулася власниця крамниці зілля «У старої жаби» і замовила програму для ведення інвентарю - додавання, видалення, пошуку та оновлення зілля. Додай об'єкту atTheOldToad властивість potions, значенням якої зроби порожній масив.
 
@@ -964,7 +963,7 @@ console.log('Task35');
 //   // Change code above this line
 // };
 
-console.log('Task36');
+console.log('%cTask36', 'color: green; font-weight: bold;');
 
 // Додай об'єкту atTheOldToad метод getPotions(), який просто повертає значення властивості potions.
 
@@ -981,7 +980,7 @@ console.log('Task36');
 //   // Change code above this line
 // };
 
-console.log('Task37');
+console.log('%cTask37', 'color: green; font-weight: bold;');
 
 // Доповни метод addPotion(potionName) таким чином, щоб він додавав зілля potionName в кінець масиву зілля у властивості potions.
 
@@ -1001,7 +1000,7 @@ console.log('Task37');
 //   },
 // };
 
-console.log('Task38');
+console.log('%cTask38', 'color: green; font-weight: bold;');
 
 // Доповни метод removePotion(potionName) таким чином, щоб він видаляв зілля potionName з масиву зілля у властивості potions.
 
@@ -1021,7 +1020,7 @@ console.log('Task38');
 //   },
 // };
 
-console.log('Task39');
+console.log('%cTask39', 'color: green; font-weight: bold;');
 
 // Доповни метод updatePotionName(oldName, newName) таким чином, щоб він оновлював назву зілля з oldName на newName в масиві зілля у властивості potions.
 
@@ -1041,7 +1040,7 @@ console.log('Task39');
 //   },
 // };
 
-console.log('Task40');
+console.log('%cTask40', 'color: green; font-weight: bold;');
 
 // Замовниця хоче, щоб кожне зілля було представлено не тільки ім'ям, але й ціною, а в майбутньому, можливо, й іншими характеристиками. Тому зараз у властивості potions буде зберігатися масив об'єктів з наступними властивостями.
 
@@ -1113,4 +1112,4 @@ console.log('Task40');
 //   // Change code above this line
 // };
 
-console.log('Task41');
+console.log('%cTask41', 'color: green; font-weight: bold;');

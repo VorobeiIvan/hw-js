@@ -2,6 +2,7 @@
 // _______________________________________________________________________________
 // _______________________________________________________________________________
 
+console.log('%cTask1', 'color: green; font-weight: bold;');
 // Виконай рефакторинг методів об'єкта pizzaPalace, розставивши відсутні this в місцях звернення до властивостей і методів об'єкта.
 
 // Метод checkPizza об'єкта pizzaPalace використовує this.
@@ -28,7 +29,7 @@
 //     // Change code above this line
 //   };
 
-console.log('Task1');
+console.log('%cTask2', 'color: green; font-weight: bold;');
 
 // Перед звільненням розробник зламав вихідний код управління акаунтами користувачів нашого сервісу доставки їжі. Виконай рефакторинг методів об'єкта customer, розставивши відсутні this під час звернення до властивостей об'єкта.
 
@@ -77,7 +78,7 @@ console.log('Task1');
 // console.log(customer.getBalance()); // 19750
 // console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
 
-console.log('Task2');
+console.log('%cTask3', 'color: green; font-weight: bold;');
 // Тестувальники знайшли баги в коді сервісу зберігання історії замовлень їжі. Тобі необхідно виправити їх, правильно розставивши this в методах об'єкта historyService, щоб методи почали працювати правильно.
 
 // Оголошена змінна historyService
@@ -113,8 +114,8 @@ console.log('Task2');
 //     },
 //     // Change code above this line
 //   };
-  
-console.log('Task3');
+
+console.log('%cTask4', 'color: green; font-weight: bold;');
 // Зміни код таким чином, щоб об'єкт parent став прототипом для об'єкта у змінній сhild.
 
 // Оголошена змінна parent
@@ -140,15 +141,14 @@ console.log('Task3');
 //     heritage: "Irish",
 //   };
 //   // Change code below this line
-  
+
 //   const child = {};
-  
+
 //   // Change code above this line
 //   child.name = "Jason";
 //   child.age = 27;
-  
 
-console.log('Task4');
+console.log('%cTask5', 'color: green; font-weight: bold;');
 
 // Зміни код, побудувавши ланцюжок прототипів таким чином, щоб об'єкт ancestor був прототипом для parent, а той, своєю чергою, був прототипом для child.
 
@@ -180,25 +180,24 @@ console.log('Task4');
 //     heritage: "Irish",
 //   };
 //   // Change code below this line
-  
+
 //   const parent = {};
 //   parent.name = "Stacey";
 //   parent.surname = "Moore";
 //   parent.age = 54;
-  
+
 //   const child = {};
 //   child.name = "Jason";
 //   child.age = 27;
-  
+
 //   // Change code above this line
-  
-console.log('Task5');
+console.log('%cTask6', 'color: green; font-weight: bold;');
 // Використовуючи ключове слово class, оголоси клас Car з порожнім тілом.
 
 // Оголошений клас Car
 // Результат виклику new Car() - це порожній об'єкт
 
-console.log('Task6');
+console.log('%cTask7', 'color: green; font-weight: bold;');
 // Додай класу Car метод constructor, який приймає три параметри:
 
 // brand - марка автомобіля.
@@ -213,13 +212,11 @@ console.log('Task6');
 // В результаті виклику new Car("Nissan","Murano", 31700) утвориться об'єкт { brand: "Nissan", model: "Murano", price: 31700 }
 // class Car {
 //     // Change code below this line
-  
-  
-  
+
 //     // Change code above this line
 //   }
-  
-console.log('Task7');
+
+console.log('%cTask8', 'color: green; font-weight: bold;');
 // Виконай рефакторинг класу Car таким чином, щоб він приймав один параметр - об'єкт з властивостями brand, model і price. Деструктуризуй об'єкт в сигнатурі (підписі) конструктора.
 
 // Оголошений клас Car
@@ -237,7 +234,7 @@ console.log('Task7');
 //     }
 //     // Change code above this line
 //   }
-console.log('Task8');
+console.log('%cTask9', 'color: green; font-weight: bold;');
 // Додай класу Car два методи.
 
 // getPrice() - повертає значення властивості price з об'єкта, який буде його викликати.
@@ -253,13 +250,11 @@ console.log('Task8');
 //       this.price = price;
 //     }
 //     // Change code below this line
-  
-  
-  
+
 //     // Change code above this line
 //   }
-  
-console.log('Task9');
+
+console.log('%cTask10', 'color: green; font-weight: bold;');
 
 // Напиши клас Storage, який буде створювати об'єкти для управління складом товарів. Клас очікує тільки один аргумент - початковий масив товарів, який записується у властивість items об'єкта, що створюється.
 
@@ -283,7 +278,6 @@ console.log('Task9');
 // Другий виклик, storage.getItems(), після виклику storage.addItem("Droid"), повертає масив ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
 // Третій виклик storage.getItems(), після виклику storage.removeItem("Prolonger"), повертає масив ["Nanitoids", "Antigravitator", "Droid"]
 
-
 // // Change code above this line
 // const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
 // console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
@@ -291,8 +285,7 @@ console.log('Task9');
 // console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
 // storage.removeItem("Prolonger");
 // console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
-
-console.log('Task10');
+console.log('%cTask11', 'color: green; font-weight: bold;');
 
 // Напиши клас StringBuilder, який приймає один параметр initialValue - довільний рядок, який записується у властивість value об'єкта, що створюється.
 
@@ -320,8 +313,6 @@ console.log('Task10');
 // Третій виклик builder.getValue(), після виклику builder.padEnd("^"), повертає рядок ^.^
 // Четвертий виклик builder.getValue(), після виклику builder.padBoth("="), повертає рядок =^.^=
 
-
-
 // // Change code above this line
 // const builder = new StringBuilder(".");
 // console.log(builder.getValue()); // "."
@@ -332,7 +323,7 @@ console.log('Task10');
 // builder.padBoth("=");
 // console.log(builder.getValue()); // "=^.^="
 
-console.log('Task11');
+console.log('%cTask12', 'color: green; font-weight: bold;');
 
 // Виконай рефакторинг класу Car таким чином, щоб властивість brand була приватною, і додай два методи для публічного інтерфейсу, для читання і зміни цієї властивості.
 
@@ -349,18 +340,17 @@ console.log('Task11');
 // Метод changeBrand("Honda") змінює значення приватної властивості brand на "Honda"
 // class Car {
 //     // Change code below this line
-  
+
 //     constructor({ brand, model, price }) {
 //       this.brand = brand;
 //       this.model = model;
 //       this.price = price;
 //     }
-  
+
 //     // Change code above this line
 //   }
-  
 
-console.log('Task12');
+console.log('%cTask13', 'color: green; font-weight: bold;');
 
 // Виконай рефакторинг класу Storage, зробивши властивість items приватною.
 
@@ -380,24 +370,24 @@ console.log('Task12');
 
 // class Storage {
 //     // Change code below this line
-  
+
 //     constructor(items) {
 //       this.items = items;
 //     }
-  
+
 //     getItems() {
 //       return this.items;
 //     }
-  
+
 //     addItem(newItem) {
 //       this.items.push(newItem);
 //     }
-  
+
 //     removeItem(itemToRemove) {
 //       this.items = this.items.filter(item => item !== itemToRemove);
 //     }
 //   }
-  
+
 //   // Change code above this line
 //   const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
 //   console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
@@ -405,8 +395,8 @@ console.log('Task12');
 //   console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
 //   storage.removeItem("Prolonger");
 //   console.log(storage.getItems()); // ["Нанитоиды", "Антигравитатор", "Droid"]
-  
-console.log('Task13');
+
+console.log('%cTask14', 'color: green; font-weight: bold;');
 
 // Виконай рефакторинг класу StringBuilder, зробивши властивість value приватною.
 
@@ -437,29 +427,29 @@ console.log('Task13');
 // Четвертий виклик builder.getValue(), після виклику builder.padBoth("="), повертає рядок =^.^=
 // class StringBuilder {
 //     // Change code below this line
-  
+
 //     constructor(initialValue) {
 //       this.value = initialValue;
 //     }
-  
+
 //     getValue() {
 //       return this.value;
 //     }
-  
+
 //     padEnd(str) {
 //       this.value += str;
 //     }
-  
+
 //     padStart(str) {
 //       this.value = str + this.value;
 //     }
-  
+
 //     padBoth(str) {
 //       this.padStart(str);
 //       this.padEnd(str);
 //     }
 //   }
-  
+
 //   // Change code above this line
 //   const builder = new StringBuilder(".");
 //   console.log(builder.getValue()); // "."
@@ -469,8 +459,8 @@ console.log('Task13');
 //   console.log(builder.getValue()); // "^.^"
 //   builder.padBoth("=");
 //   console.log(builder.getValue()); // "=^.^="
-  
-console.log('Task14');
+
+console.log('%cTask15', 'color: green; font-weight: bold;');
 
 // Виконай рефакторинг класу Car. Зроби властивості model і price приватними, а також #brand. Стандартизуй публічний інтерфейс класу, замінивши вже оголошені методи на гетери та сетери brand, model і price, для взаємодії з приватними властивостями.
 
@@ -488,39 +478,39 @@ console.log('Task14');
 // class Car {
 //     // Change code below this line
 //     #brand;
-  
+
 //     constructor({ brand, model, price }) {
 //       this.#brand = brand;
 //       this.model = model;
 //       this.price = price;
 //     }
-  
+
 //     getBrand() {
 //       return this.#brand;
 //     }
-  
+
 //     changeBrand(newBrand) {
 //       this.#brand = newBrand;
 //     }
-  
+
 //     getModel() {
 //       return this.model;
 //     }
-  
+
 //     updateModel(newModel) {
 //       this.model = newModel;
 //     }
-  
+
 //     getPrice() {
 //       return this.price;
 //     }
-  
+
 //     setPrice(newPrice) {
 //       this.price = newPrice;
 //     }
 //     // Change code above this line
 //   }
-console.log('Task15');
+console.log('%cTask16', 'color: green; font-weight: bold;');
 
 // Виконай рефакторинг класу Car. Додай публічну статичну властивість MAX_PRICE зі значенням 50000 - максимально допустима ціна автомобіля.
 
@@ -537,30 +527,30 @@ console.log('Task15');
 // class Car {
 //     // Change code below this line
 //     #price;
-  
+
 //     constructor({ price }) {
 //       this.#price = price;
 //     }
-  
+
 //     get price() {
 //       return this.#price;
 //     }
-  
+
 //     set price(newPrice) {
 //       this.#price = newPrice;
 //     }
 //     // Change code above this line
 //   }
-  
+
 //   const audi = new Car({ price: 35000 });
 //   console.log(audi.price); // 35000
-  
+
 //   audi.price = 49000;
 //   console.log(audi.price); // 49000
-  
+
 //   audi.price = 51000;
 //   console.log(audi.price); // 49000
-console.log('Task16');
+console.log('%cTask17', 'color: green; font-weight: bold;');
 
 // Додай класу Car публічний статичний метод checkPrice (price), що приймає ціну автомобіля. Метод повинен порівняти значення параметра price і приватної статичного властивості MAX_PRICE.
 
@@ -577,21 +567,20 @@ console.log('Task16');
 // class Car {
 //     static #MAX_PRICE = 50000;
 //     // Change code below this line
-  
+
 //     // Change code above this line
 //     constructor({ price }) {
 //       this.price = price;
 //     }
 //   }
-  
+
 //   const audi = new Car({ price: 36000 });
 //   const bmw = new Car({ price: 64000 });
-  
+
 //   console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
 //   console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
-  
 
-console.log('Task17');
+console.log('%cTask18', 'color: green; font-weight: bold;');
 
 // У застосунку потрібен адміністратор з можливістю додавати пошти користувачів у чорний список.
 
@@ -606,18 +595,18 @@ console.log('Task17');
 //     constructor(email) {
 //       this.email = email;
 //     }
-  
+
 //     get email() {
 //       return this.email;
 //     }
-  
+
 //     set email(newEmail) {
 //       this.email = newEmail;
 //     }
 //   }
 //   // Change code below this line
-  
-console.log('Task18');
+
+console.log('%cTask19', 'color: green; font-weight: bold;');
 
 // Додай класу Admin метод constructor, який приймає один параметр - об'єкт налаштувань з двома властивостями email і accessLevel. Додай класу Admin публічну властивість accessLevel, значення якої буде передаватися під час виклику конструктора.
 
@@ -632,40 +621,40 @@ console.log('Task18');
 // Звернення до Admin.AccessLevel.SUPERUSER повертає рядок "superuser"
 // class User {
 //     email;
-  
+
 //     constructor(email) {
 //       this.email = email;
 //     }
-  
+
 //     get email() {
 //       return this.email;
 //     }
-  
+
 //     set email(newEmail) {
 //       this.email = newEmail;
 //     }
 //   }
-  
+
 //   class Admin extends User {
 //     // Change code below this line
-  
+
 //     static AccessLevel = {
 //       BASIC: "basic",
 //       SUPERUSER: "superuser",
 //     };
-  
+
 //     // Change code above this line
 //   }
-  
+
 //   const mango = new Admin({
 //     email: "mango@mail.com",
 //     accessLevel: Admin.AccessLevel.SUPERUSER,
 //   });
-  
+
 //   console.log(mango.email); // "mango@mail.com"
 //   console.log(mango.accessLevel); // "superuser"
-  
-console.log('Task19');
+
+console.log('%cTask20', 'color: green; font-weight: bold;');
 
 // Додай класу Admin наступні властивості і методи.
 
@@ -684,47 +673,44 @@ console.log('Task19');
 // Виклик mango.isBlacklisted("poly@mail.com") повертає true
 // class User {
 //     email;
-  
+
 //     constructor(email) {
 //       this.email = email;
 //     }
-  
+
 //     get email() {
 //       return this.email;
 //     }
-  
+
 //     set email(newEmail) {
 //       this.email = newEmail;
 //     }
 //   }
 //   class Admin extends User {
 //     // Change code below this line
-  
+
 //     static AccessLevel = {
 //       BASIC: "basic",
 //       SUPERUSER: "superuser",
 //     };
-  
+
 //     constructor({ email, accessLevel }) {
 //       super(email);
 //       this.accessLevel = accessLevel;
 //     }
-  
+
 //     // Change code above this line
 //   }
-  
+
 //   const mango = new Admin({
 //     email: "mango@mail.com",
 //     accessLevel: Admin.AccessLevel.SUPERUSER,
 //   });
-  
+
 //   console.log(mango.email); // "mango@mail.com"
 //   console.log(mango.accessLevel); // "superuser"
-  
+
 //   mango.blacklist("poly@mail.com");
 //   console.log(mango.blacklistedEmails); // ["poly@mail.com"]
 //   console.log(mango.isBlacklisted("mango@mail.com")); // false
 //   console.log(mango.isBlacklisted("poly@mail.com")); // true
-  
-console.log('Task20');
-

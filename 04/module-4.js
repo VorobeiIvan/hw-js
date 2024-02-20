@@ -2,6 +2,8 @@
 // _______________________________________________________________________________
 // _______________________________________________________________________________
 
+// #region task1
+console.log('%cTask1', 'color: green; font-weight: bold;');
 // Доповни код таким чином, щоб у змінній result був результат виконання функції makePizza, а у змінній pointer було посилання на функцію makePizza.
 
 // Оголошена функція makePizza
@@ -10,17 +12,20 @@
 // Значення змінної result отримане за допомогою виклику функції
 // Оголошена змінна pointer
 // Значення змінної pointer - це посилання на функцію makePizza
-// function makePizza() {
-//     return "Your pizza is being prepared, please wait.";
-//   }
-//   // Change code below this line
-  
-//   const result = null;
-//   const pointer = null;
-  
 
-console.log('Task1');
+function makePizza() {
+  return 'Your pizza is being prepared, please wait.';
+}
 
+const result = makePizza();
+const pointer = makePizza;
+
+console.log('result', result);
+console.log('pointer', pointer);
+
+// #endregion
+// #region task2
+console.log('%cTask2', 'color: green; font-weight: bold;');
 // Доповни функцію makeMessage таким чином, щоб вона очікувала другим параметром (параметр callback) колбек-функцію і повертала її виклик. Функція deliverPizza або makePizza буде передаватися як колбек і очікувати аргументом ім'я готової піци, що доставляється.
 
 // Оголошена функція deliverPizza
@@ -29,110 +34,112 @@ console.log('Task1');
 // Функція makeMessage приймає два параметри, названі відповідно до завдання, pizzaName і callback
 // Виклик makeMessage("Royal Grand", makePizza) повертає рядок "Pizza Royal Grand is being prepared, please wait..."
 // Виклик makeMessage("Ultracheese", deliverPizza) повертає рядок "Delivering Ultracheese pizza."
-// function deliverPizza(pizzaName) {
-//     return `Delivering ${pizzaName} pizza.`;
-//   }
-  
-//   function makePizza(pizzaName) {
-//     return `Pizza ${pizzaName} is being prepared, please wait...`;
-//   }
-  
-//   // Chande code below this line
-//   function makeMessage(pizzaName) {
-//     return;
-//   }
-  
+function deliverPizza2(pizzaName) {
+  return `Delivering ${pizzaName} pizza.`;
+}
 
-console.log('Task2');
+function makePizza2(pizzaName) {
+  return `Pizza ${pizzaName} is being prepared, please wait...`;
+}
 
+function makeMessage2(pizzaName, callback) {
+  return callback(pizzaName);
+}
+console.log(makeMessage2('Royal Grand', makePizza2)); //повертає рядок "Pizza Royal Grand is being prepared, please wait..."
+console.log(makeMessage2('Ultracheese', deliverPizza2)); // повертає рядок "Delivering Ultracheese pizza."
+
+// #endregion
+// #region task3
+console.log('%cTask3', 'color: green; font-weight: bold;');
 // Доповни другий виклик функції makePizza(pizzaName, callback), передавши другим аргументом інлайн колбек-функцію eatPizza(pizzaName), яка логує рядок "Eating pizza <назва піци>".
 
 // Оголошена функція makePizza
 // Функція makePizza приймає два параметри
 // Другим аргументом під час виклику makePizza("Ultracheese") передана функція eatPizza з єдиним параметром pizzaName
 
-// function makePizza(pizzaName, callback) {
-//     console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
-//     callback(pizzaName);
-//   }
-  
-//   makePizza("Royal Grand", function deliverPizza(pizzaName) {
-//     console.log(`Delivering pizza ${pizzaName}.`);
-//   });
-//   // Change code below this line
-  
-//   makePizza("Ultracheese");
-  
+function makePizza3(pizzaName, callback) {
+  console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+  callback(pizzaName);
+}
 
-console.log('Task3');
+makePizza3('Royal Grand', function deliverPizza(pizzaName) {
+  console.log(`Delivering pizza ${pizzaName}.`);
+});
 
+makePizza3('Ultracheese', function eatPizza(pizzaName) {
+  console.log(`Eating pizza ${pizzaName}.`);
+});
+
+//#endregion
+// #region task4
+
+console.log('%cTask4', 'color: green; font-weight: bold;');
 // Необхідно написати логіку обробки замовлення піци. Виконай рефакторинг методу order таким чином, щоб він приймав другим і третім параметром два колбеки onSuccess і onError.
-
 // Якщо у властивості pizzas відсутня піца з назвою з параметра pizzaName, метод order повинен повертати результат виклику колбека onError, передаючи йому аргументом рядок "There is no pizza with a name <имя пиццы> in the assortment."
 // Якщо у властивості pizzas присутня піца з назвою з параметра pizzaName, метод order повинен повертати результат виклику колбека onSuccess, передаючи йому аргументом назву замовленої піци.
 // Після оголошення об'єкта pizzaPalace ми додали колбеки і виклики методів. Будь ласка, нічого там не міняй.
-
 // Метод order оголошує три параметри
 // Виклик pizzaPalace.order("Smoked", makePizza, onOrderError) повертає "Your order is accepted. Cooking pizza Smoked."
 // Виклик pizzaPalace.order("Four meats", makePizza, onOrderError) повертає "Your order is accepted. Cooking pizza Four meats."
 // Виклик pizzaPalace.order("Big Mike", makePizza, onOrderError) повертає "Error! There is no pizza with a name Big Mike in the assortment."
 // Виклик pizzaPalace.order("Vienna", makePizza, onOrderError) повертає "Error! There is no pizza with a name Vienna in the assortment."
 
-// const pizzaPalace = {
-//     pizzas: ["Ultracheese", "Smoked", "Four meats"],
-//     order(pizzaName) {},
-//   };
-//   // Change code above this line
-  
-//   // Callback for onSuccess
-//   function makePizza(pizzaName) {
-//     return `Your order is accepted. Cooking pizza ${pizzaName}.`;
-//   }
-  
-//   // Callback for onError
-//   function onOrderError(error) {
-//     return `Error! ${error}`;
-//   }
-  
-//   // Method calls with callbacks
-//   pizzaPalace.order("Smoked", makePizza, onOrderError);
-//   pizzaPalace.order("Four meats", makePizza, onOrderError);
-//   pizzaPalace.order("Big Mike", makePizza, onOrderError);
-//   pizzaPalace.order("Vienna", makePizza, onOrderError);
-  
+const pizzaPalace = {
+  pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
+  order(pizzaName, onSuccess, onError) {
+    if (!this.pizzas.includes(pizzaName)) {
+      return onError(
+        `There is no pizza with a name ${pizzaName}in the assortment.`
+      );
+    } else {
+      return onSuccess(pizzaName);
+    }
+  },
+};
+// Callback for onSuccess
+function makePizza4(pizzaName) {
+  return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+}
 
-console.log('Task4');
+// Callback for onError
+function onOrderError4(error) {
+  return `Error! ${error}`;
+}
 
+// Method calls with callbacks
+console.log(pizzaPalace.order('Smoked', makePizza4, onOrderError4));
+console.log(pizzaPalace.order('Four meats', makePizza4, onOrderError4));
+console.log(pizzaPalace.order('Big Mike', makePizza4, onOrderError4));
+console.log(pizzaPalace.order('Vienna', makePizza4, onOrderError4));
 
+//#endregion
+// #region task5
 // Функція calculateTotalPrice(orderedItems) приймає один параметр orderedItems - масив чисел, і розраховує загальну суму його елементів, яка зберігається у змінній totalPrice і повертається як результат роботи функції.
-
 // Виконай рефакторинг функції таким чином, щоб замість циклу for, вона використовувала метод forEach.
-
 // Оголошена функція calculateTotalPrice(orderedItems)
 // Для перебирання масиву orderedItems використаний метод forEach
 // Виклик функції calculateTotalPrice([12, 85, 37, 4]) повертає 138
 // Виклик функції calculateTotalPrice([164, 48, 291]) повертає 503
 // Виклик функції calculateTotalPrice([412, 371, 94, 63, 176]) повертає 1116
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('%cTask5', 'color: green; font-weight: bold;');
 
-// function calculateTotalPrice(orderedItems) {
-//     let totalPrice = 0;
-//     // Change code below this line
-  
-//     for (let i = 0; i < orderedItems.length; i += 1) {
-//       totalPrice += orderedItems[i];
-//     }
-  
-//     // Change code above this line
-//     return totalPrice;
-//   }
-  
-console.log('Task5');
+function calculateTotalPrice(orderedItems) {
+  let totalPrice = 0;
+  orderedItems.forEach(element => {
+    totalPrice += element;
+  });
+  return totalPrice;
+}
+console.log(calculateTotalPrice([12, 85, 37, 4])); //повертає 138
+console.log(calculateTotalPrice([164, 48, 291])); // повертає 503
+console.log(calculateTotalPrice([412, 371, 94, 63, 176])); // повертає 1116
+
+//#endregion
+// #region task6
 
 // Функція filterArray(numbers, value) приймає масив чисел numbers і повертає новий масив, в якому будуть тільки ті елементи оригінального масиву, які більші за значення параметра value.
-
 // Виконай рефакторинг функції таким чином, щоб замість циклу for, вона використовувала метод forEach.
-
 // Оголошена функція filterArray(numbers, value)
 // Для перебирання масиву numbers використаний метод forEach
 // Виклик функції filterArray([1, 2, 3, 4, 5], 3) повертає [4, 5]
@@ -141,23 +148,22 @@ console.log('Task5');
 // Виклик функції filterArray([12, 24, 8, 41, 76], 38) повертає [41, 76]
 // Виклик функції filterArray([12, 24, 8, 41, 76], 20) повертає [24, 41, 76]
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('%cTask6', 'color: green; font-weight: bold;');
 
-// function filterArray(numbers, value) {
-//     const filteredNumbers = [];
-//     // Change code below this line
-  
-//     for (let i = 0; i < numbers.length; i += 1) {
-//       if (numbers[i] > value) {
-//         filteredNumbers.push(numbers[i]);
-//       }
-//     }
-  
-//     // Change code above this line
-//     return filteredNumbers;
-//   }
-  
-console.log('Task6');
+function filterArray(numbers, value) {
+  const filteredNumbers = [];
+  numbers.forEach(number => number > value && filteredNumbers.push(number));
+  return filteredNumbers;
+}
 
+console.log(filterArray([1, 2, 3, 4, 5], 3)); // повертає [4, 5]
+console.log(filterArray([1, 2, 3, 4, 5], 4)); // повертає [5]
+console.log(filterArray([1, 2, 3, 4, 5], 5)); // повертає []
+console.log(filterArray([12, 24, 8, 41, 76], 38)); // повертає [41, 76]
+console.log(filterArray([12, 24, 8, 41, 76], 20)); // повертає [24, 41, 76]
+
+//#endregion
+// #region task7
 // Функція getCommonElements(firstArray, secondArray) приймає два масиви довільної довжини в параметри firstArray і secondArray, і повертає новий масив їхніх спільних елементів, тобто тих, які присутні в обох масивах.
 
 // Виконай рефакторинг функції таким чином, щоб замість циклу for, вона використовувала метод forEach.
@@ -170,23 +176,22 @@ console.log('Task6');
 // Виклик getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]) повертає [10, 30, 40]
 // Виклик getCommonElements([1, 2, 3], [10, 20, 30]) повертає []
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('%cTask7', 'color: green; font-weight: bold;');
 
-// function getCommonElements(firstArray, secondArray) {
-//     const commonElements = [];
-//     // Change code below this line
-  
-//     for (let i = 0; i < firstArray.length; i += 1) {
-//       if (secondArray.includes(firstArray[i])) {
-//         commonElements.push(firstArray[i]);
-//       }
-//     }
-  
-//     return commonElements;
-//     // Change code above this line
-//   }
-  
-console.log('Task7');
+function getCommonElements(firstArray, secondArray) {
+  const commonElements = [];
+  firstArray.forEach(el => secondArray.includes(el) && commonElements.push(el));
 
+  return commonElements;
+}
+console.log(getCommonElements([1, 2, 3], [2, 4])); // повертає [2]
+console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19])); // повертає [1, 2]
+console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27])); // повертає [12, 27, 3]
+console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40])); // повертає [10, 30, 40]
+console.log(getCommonElements([1, 2, 3], [10, 20, 30])); // повертає []
+
+//#endregion
+// #region task8
 // Виконай рефакторинг функції calculateTotalPrice() таким чином, щоб вона була оголошена як стрілочна.
 
 // Оголошена змінна calculateTotalPrice
@@ -195,16 +200,17 @@ console.log('Task7');
 // Виклик calculateTotalPrice(8, 60) повертає 480
 // Виклик calculateTotalPrice(3, 400) повертає 1200
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('%cTask8', 'color: green; font-weight: bold;');
 
-// // Change code below this line
+calculateTotalPrice = (quantity, pricePerItem) => {
+  return quantity * pricePerItem;
+};
+console.log(calculateTotalPrice(5, 100)); // повертає 500
+console.log(calculateTotalPrice(8, 60)); // повертає 480
+console.log(calculateTotalPrice(3, 400)); // повертає 1200
 
-// function calculateTotalPrice(quantity, pricePerItem) {
-//     // Change code above this line
-//     return quantity * pricePerItem;
-//   }
-  
-
-console.log('Task8');
+//#endregion
+// #region task9
 // Виконай рефакторинг функції calculateTotalPrice() таким чином, щоб вона використовувала неявне повернення.
 
 // Оголошена змінна calculateTotalPrice
@@ -214,15 +220,15 @@ console.log('Task8');
 // Виклик calculateTotalPrice(8, 60) повертає 480
 // Виклик calculateTotalPrice(3, 400) повертає 1200
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('%cTask9', 'color: green; font-weight: bold;');
 
-// // Change code below this line
-// const calculateTotalPrice = (quantity, pricePerItem) => {
-//     return quantity * pricePerItem;
-//   };
-//   // Change code above this line
-  
-console.log('Task9');
+calculateTotalPrice = (quantity, pricePerItem) => quantity * pricePerItem;
+console.log(calculateTotalPrice(5, 100)); // повертає 500
+console.log(calculateTotalPrice(8, 60)); // повертає 480
+console.log(calculateTotalPrice(3, 400)); // повертає 1200
 
+//#endregion
+// #region task10
 // Виконай рефакторинг функції calculateTotalPrice(orderedItems), замінивши її оголошення на стрілочну функцію. Заміни колбек-функцію, передану в метод forEach(), на стрілочну функцію.
 
 // Оголошена змінна calculateTotalPrice
@@ -233,21 +239,19 @@ console.log('Task9');
 // Виклик функції calculateTotalPrice([164, 48, 291]) повертає 503
 // Виклик функції calculateTotalPrice([412, 371, 94, 63, 176]) повертає 1116
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('%cTask10', 'color: green; font-weight: bold;');
 
-// // Change code below this line
-// function calculateTotalPrice(orderedItems) {
-//     let totalPrice = 0;
-  
-//     orderedItems.forEach(function (item) {
-//       totalPrice += item;
-//     });
-  
-//     return totalPrice;
-//   }
-//   // Change code above this line
-  
+const calculateTotalPrice10 = orderedItems => {
+  let totalPrice = 0;
+  orderedItems.forEach(item => (totalPrice += item));
+  return totalPrice;
+};
+console.log(calculateTotalPrice10([12, 85, 37, 4])); // повертає 138
+console.log(calculateTotalPrice10([164, 48, 291])); // повертає 503
+console.log(calculateTotalPrice10([412, 371, 94, 63, 176])); // повертає 1116
 
-console.log('Task10');
+//#endregion
+// #region task11
 // Заміни оголошення функції filterArray() і колбек для методу forEach() на стрілочні функції.
 
 // Оголошена змінна filterArray
@@ -261,21 +265,22 @@ console.log('Task10');
 // Виклик функції filterArray([12, 24, 8, 41, 76], 20) повертає [24, 41, 76]
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 
-// // Change code below this line
-// function filterArray(numbers, value) {
-//     const filteredNumbers = [];
-  
-//     numbers.forEach(function (number) {
-//       if (number > value) {
-//         filteredNumbers.push(number);
-//       }
-//     });
-  
-//     // Change code above this line
-//     return filteredNumbers;
-//   }
-  
-console.log('Task11');
+console.log('%cTask11', 'color: green; font-weight: bold;');
+
+const filterArray11 = (numbers, value) => {
+  const filteredNumbers = [];
+  numbers.forEach(number => number > value && filteredNumbers.push(number));
+
+  return filteredNumbers;
+};
+console.log(filterArray11([1, 2, 3, 4, 5], 3)); // повертає [4, 5]
+console.log(filterArray11([1, 2, 3, 4, 5], 4)); //повертає [5]
+console.log(filterArray11([1, 2, 3, 4, 5], 5)); //повертає []
+console.log(filterArray11([12, 24, 8, 41, 76], 38)); //повертає [41, 76]
+console.log(filterArray11([12, 24, 8, 41, 76], 20)); //повертає [24, 41, 76]
+
+//#endregion
+// #region task12
 
 // Заміни оголошення функції getCommonElements() і колбек для методу forEach() на стрілочні функції.
 
@@ -289,22 +294,24 @@ console.log('Task11');
 // Виклик getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]) повертає [10, 30, 40]
 // Виклик getCommonElements([1, 2, 3], [10, 20, 30]) повертає []
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('%cTask12', 'color: green; font-weight: bold;');
 
-// // Change code below this line
-// function getCommonElements(firstArray, secondArray) {
-//     const commonElements = [];
-  
-//     firstArray.forEach(function (element) {
-//       if (secondArray.includes(element)) {
-//         commonElements.push(element);
-//       }
-//     });
-  
-//     // Change code above this line
-//     return commonElements;
-//   }
-  
-console.log('Task12');
+const getCommonElements12 = (firstArray, secondArray) => {
+  const commonElements = [];
+
+  firstArray.forEach(
+    element => secondArray.includes(element) && commonElements.push(element)
+  );
+  return commonElements;
+};
+console.log(getCommonElements12([1, 2, 3], [2, 4])); // повертає [2]
+console.log(getCommonElements12([1, 2, 3], [2, 1, 17, 19])); // повертає [1, 2]
+console.log(getCommonElements12([24, 12, 27, 3], [12, 8, 3, 36, 27])); // повертає [12, 27, 3]
+console.log(getCommonElements12([10, 20, 30, 40], [4, 30, 17, 10, 40])); // повертає [10, 30, 40]
+console.log(getCommonElements12([1, 2, 3], [10, 20, 30])); // повертає []
+
+//#endregion
+// #region task13
 // Функція changeEven(numbers, value) приймає масив чисел numbers і оновлює кожен елемент, значення якого - це парне число, додаючи до нього значення параметра value.
 
 // Виконай рефакторинг функції таким чином, щоб вона стала чистою - не змінювала масив чисел numbers, а створювала, наповнювала і повертала новий масив з оновленими значеннями.
@@ -316,18 +323,21 @@ console.log('Task12');
 // Виклик changeEven([17, 24, 68, 31, 42], 100) повертає новий масив [17, 124, 168, 31, 142]
 // Виклик changeEven([44, 13, 81, 92, 36, 54], 100) повертає новий масив [144, 13, 81, 192, 136, 154]
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('%cTask13', 'color: green; font-weight: bold;');
 
-// function changeEven(numbers, value) {
-//     // Change code below this line
-//     for (let i = 0; i < numbers.length; i += 1) {
-//       if (numbers[i] % 2 === 0) {
-//         numbers[i] = numbers[i] + value;
-//       }
-//     }
-//     // Change code above this line
-//   }
-  
-console.log('Task13');
+const changeEven = (numbers, value) => {
+  const newNumbers = numbers.map(number =>
+    number % 2 === 0 ? number + value : number
+  );
+  return newNumbers;
+};
+console.log(changeEven([1, 2, 3, 4, 5], 10)); // повертає новий масив [1, 12, 3, 14, 5]
+console.log(changeEven([2, 8, 3, 7, 4, 6], 10)); // повертає новий масив [12, 18, 3, 7, 14, 16]
+console.log(changeEven([17, 24, 68, 31, 42], 100)); // повертає новий масив [17, 124, 168, 31, 142]
+console.log(changeEven([44, 13, 81, 92, 36, 54], 100)); // повертає новий масив [144, 13, 81, 192, 136, 154]
+
+//#endregion
+// #region task14
 // Доповни код таким чином, щоб у змінній planetsLengths вийшов масив довжин назв планет. Обов'язково використовуй метод map().
 
 // Оголошена змінна planets
@@ -335,14 +345,15 @@ console.log('Task13');
 // Оголошена змінна planetsLengths
 // Значення змінної planetsLengths - це масив [5, 4, 5, 7]
 // Для перебирання масиву планет використаний метод map()
+console.log('%cTask14', 'color: green; font-weight: bold;');
 
-// const planets = ["Earth", "Mars", "Venus", "Jupiter"];
-// // Change code below this line
-// const planetsLengths = planets;
+const planets = ['Earth', 'Mars', 'Venus', 'Jupiter'];
 
+const planetsLengths = planets.map(planet => planet.length);
 
-console.log('Task14');
-
+console.log('planetsLengths =>', planetsLengths);
+//#endregion
+// #region task15
 // Використовуючи метод map(), зроби так, щоб у змінній titles вийшов масив назв книг (властивість title) з усіх об'єктів масиву books.
 
 // Оголошена змінна books
@@ -350,32 +361,33 @@ console.log('Task14');
 // Оголошена змінна titles
 // Значення змінної titles - це масив ["The Last Kingdom", "Beside Still Waters", "The Dream of a Ridiculous Man", "Redder Than Blood", "Enemy of God"]
 // Для перебирання масиву books використовується метод map() як чиста функція
+console.log('%cTask15', 'color: green; font-weight: bold;');
 
-// const books = [
-//     {
-//       title: "The Last Kingdom",
-//       author: "Bernard Cornwell",
-//       rating: 8.38,
-//     },
-//     {
-//       title: "Beside Still Waters",
-//       author: "Robert Sheckley",
-//       rating: 8.51,
-//     },
-//     {
-//       title: "The Dream of a Ridiculous Man",
-//       author: "Fyodor Dostoevsky",
-//       rating: 7.75,
-//     },
-//     { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
-//     { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
-//   ];
-//   // Change code below this line
-  
-//   const titles = books;
-  
-console.log('Task15');
+const books = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    rating: 8.38,
+  },
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    rating: 8.51,
+  },
+  {
+    title: 'The Dream of a Ridiculous Man',
+    author: 'Fyodor Dostoevsky',
+    rating: 7.75,
+  },
+  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+  { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 },
+];
 
+const titles = books.map(book => book.title);
+console.log('titles = >', titles);
+
+//#endregion
+// #region task16
 // Використовуючи метод flatMap(), зроби так, щоб у змінній genres вийшов масив усіх жанрів книг (властивість genres) з масиву книг books.
 
 // Оголошена змінна books
@@ -383,30 +395,31 @@ console.log('Task15');
 // Оголошена змінна genres
 // Значення змінної genres - це масив [ "adventure", "history", "fiction", "horror", "mysticism" ]
 // Для перебирання масиву books використовується метод flatMap()
+console.log('%cTask16', 'color: green; font-weight: bold;');
 
-// const books = [
-//     {
-//       title: "The Last Kingdom",
-//       author: "Bernard Cornwell",
-//       genres: ["adventure", "history"],
-//     },
-//     {
-//       title: "Beside Still Waters",
-//       author: "Robert Sheckley",
-//       genres: ["fiction"],
-//     },
-//     {
-//       title: "Redder Than Blood",
-//       author: "Tanith Lee",
-//       genres: ["horror", "mysticism"],
-//     },
-//   ];
-//   // Change code below this line
-  
-//   const genres = books;
-  
-console.log('Task16');
+const books1 = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    genres: ['adventure', 'history'],
+  },
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    genres: ['fiction'],
+  },
+  {
+    title: 'Redder Than Blood',
+    author: 'Tanith Lee',
+    genres: ['horror', 'mysticism'],
+  },
+];
 
+const genres = books1.flatMap(book => book.genres);
+console.log('genres', genres);
+
+//#endregion
+// #region task17
 // Доповни функцію getUserNames(users) таким чином, щоб вона повертала масив імен користувачів (властивість name) з масиву об'єктів в параметрі users.
 
 // Оголошена змінна getUserNames
@@ -414,16 +427,96 @@ console.log('Task16');
 // Для перебирання параметра users використовується метод map()
 // Виклик функції із зазначеним масивом користувачів повертає масив ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('%cTask17', 'color: green; font-weight: bold;');
 
-// // Change code below this line
-// const getUserNames = users => {
-    
+const user = [
+  {
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    skills: ['ipsum', 'lorem'],
+    gender: 'male',
+    age: 37,
+  },
+  {
+    name: 'Sharlene Bush',
+    email: 'sharlenebush@tubesys.com',
+    eyeColor: 'blue',
+    friends: ['Briana Decker', 'Sharron Pace'],
+    isActive: true,
+    balance: 3821,
+    skills: ['tempor', 'mollit', 'commodo', 'veniam', 'laborum'],
+    gender: 'female',
+    age: 34,
+  },
+  {
+    name: 'Ross Vazquez',
+    email: 'rossvazquez@xinware.com',
+    eyeColor: 'green',
+    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+    isActive: false,
+    balance: 3793,
+    skills: ['nulla', 'anim', 'proident', 'ipsum', 'elit'],
+    gender: 'male',
+    age: 24,
+  },
+  {
+    name: 'Elma Head',
+    email: 'elmahead@omatom.com',
+    eyeColor: 'green',
+    friends: ['Goldie Gentry', 'Aisha Tran'],
+    isActive: true,
+    balance: 2278,
+    skills: ['adipisicing', 'irure', 'velit'],
+    gender: 'female',
+    age: 21,
+  },
+  {
+    name: 'Carey Barr',
+    email: 'careybarr@nurali.com',
+    eyeColor: 'blue',
+    friends: ['Jordan Sampson', 'Eddie Strong'],
+    isActive: true,
+    balance: 3951,
+    skills: ['ex', 'culpa', 'nostrud'],
+    gender: 'male',
+    age: 27,
+  },
+  {
+    name: 'Blackburn Dotson',
+    email: 'blackburndotson@furnigeer.com',
+    eyeColor: 'brown',
+    friends: ['Jacklyn Lucas', 'Linda Chapman'],
+    isActive: false,
+    balance: 1498,
+    skills: ['non', 'amet', 'ipsum'],
+    gender: 'male',
+    age: 38,
+  },
+  {
+    name: 'Sheree Anthony',
+    email: 'shereeanthony@kog.com',
+    eyeColor: 'brown',
+    friends: ['Goldie Gentry', 'Briana Decker'],
+    isActive: true,
+    balance: 2764,
+    skills: ['lorem', 'veniam', 'culpa'],
+    gender: 'female',
+    age: 39,
+  },
+];
 
-// };
-// // Change code above this line
+const getUserNames = users => {
+  return users.map(user => user.name);
+};
 
-console.log('Task17');
+console.log('getUserNames', getUserNames(user));
 
+//#endregion
+//#region task18
 // Доповни функцію getUserEmails(users) таким чином, щоб вона повертала масив поштових адрес користувачів (властивість email) з масиву об'єктів в параметрі users.
 
 // Оголошена змінна getUserNames
@@ -431,16 +524,15 @@ console.log('Task17');
 // Для перебирання параметра users використовується метод map()
 // Виклик функції із зазначеним масивом користувачів повертає масив ["moorehensley@indexia.com", "sharlenebush@tubesys.com", "rossvazquez@xinware.com", "elmahead@omatom.com", "careybarr@nurali.com", "blackburndotson@furnigeer.com", "shereeanthony@kog.com"]
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('%cTask18', 'color: green; font-weight: bold;');
 
 // // Change code below this line
 // const getUserEmails = users => {
-    
 
 // };
 // // Change code above this line
-
-console.log('Task18');
-
+//#endregion
+//#region task19
 // Доповни код таким чином, щоб у змінній evenNumbers утворився масив парних чисел з масиву numbers, а в змінній oddNumbers - масив непарних. Обов'язково використовуй метод filter().
 
 // Оголошена змінна numbers
@@ -450,15 +542,15 @@ console.log('Task18');
 // Оголошена змінна oddNumbers
 // Значення змінної oddNumbers - це масив [17, 61, 47, 73]
 // Для перебирання масиву numbers використаний метод filter()
+console.log('%cTask19', 'color: green; font-weight: bold;');
 
 // const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
 // // Change code below this line
 
 // const evenNumbers = numbers;
 // const oddNumbers = numbers;
-
-console.log('Task19');
-
+//#endregion
+//#region task20
 // Доповни код таким чином, щоб у змінній allGenres був масив всіх жанрів книг (властивість genres) з масиву books, а у змінній uniqueGenres - масив унікальних жанрів, без повторень.
 
 // Оголошена змінна books
@@ -469,6 +561,7 @@ console.log('Task19');
 // Значення змінної uniqueGenres - це масив ["adventure", "history", "fiction", "mysticism", "horror"]
 // Для обчислення значення змінної allGenders використаний метод flatMap()
 // Для обчислення значення змінної uniqueGenres використаний метод filter()
+console.log('%cTask20', 'color: green; font-weight: bold;');
 
 // const books = [
 //     {
@@ -490,10 +583,8 @@ console.log('Task19');
 //   // Change code below this line
 //   const allGenres = books;
 //   const uniqueGenres = allGenres;
-  
-
-console.log('Task20');
-
+//#endregion
+//#region task21
 // Використовуючи метод filter(), доповни код таким чином, щоб:
 
 // У змінній topRatedBooks утворився масив книг, рейтинг яких (властивість rating) більший за або дорівнює значенню змінної MIN_RATING.
@@ -510,6 +601,7 @@ console.log('Task20');
 // Значення змінної booksByAuthor - це масив книг, автор яких "Bernard Cornwell"
 // Для перебирання масиву books використаний метод filter()
 
+console.log('%cTask21', 'color: green; font-weight: bold;');
 // const books = [
 //     {
 //       title: "The Last Kingdom",
@@ -529,17 +621,15 @@ console.log('Task20');
 //     { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
 //     { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
 //   ];
-  
+
 //   const MIN_RATING = 8;
 //   const AUTHOR = "Bernard Cornwell";
 //   // Change code below this line
-  
+
 //   const topRatedBooks = books;
 //   const booksByAuthor = books;
-  
-
-console.log('Task21');
-
+//#endregion
+//#region task22
 // Доповни функцію getUsersWithEyeColor(users, color) таким чином, щоб вона повертала масив користувачів, у яких колір очей (властивість eyeColor) збігається зі значенням параметра color.
 
 // Оголошена змінна getUsersWithEyeColor
@@ -550,16 +640,15 @@ console.log('Task21');
 // Якщо значення параметра color - це "brown", функція повертає масив об'єктів користувачів з іменами Blackburn Dotson і Sheree Anthony
 // Якщо значення параметра color - це будь-який інший рядок, функція повертає порожній масив
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('%cTask22', 'color: green; font-weight: bold;');
 
 // // Change code below this line
 // const getUsersWithEyeColor = (users, color) => {
- 
 
 // };
 // // Change code above this line
-
-console.log('Task22');
-
+//#endregion
+//#region task23
 // Доповни функцію getUsersWithAge(users, minAge, maxAge) таким чином, щоб вона повертала масив користувачів, вік яких (властивість age) потрапляє у проміжок від minAge до maxAge.
 
 // Оголошена змінна getUsersWithAge
@@ -569,18 +658,15 @@ console.log('Task22');
 // Якщо значення параметрів minAge і maxAge дорівнюють 30 і 40 відповідно, функція повертає масив об'єктів користувачів з іменами Moore Hensley, Sharlene Bush, Blackburn Dotson, Sheree Anthony
 // Якщо значення параметрів minAge і maxAge дорівнюють 80 і 100 відповідно, функція повертає порожній масив
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
-
+console.log('%cTask23', 'color: green; font-weight: bold;');
 
 // // Change code below this line
 // const getUsersWithAge = (users, minAge, maxAge) => {
- 
 
 // };
 // // Change code above this line
-
-
-console.log('Task23');
-
+//#endregion
+//#region task24
 // Доповни функцію getUsersWithFriend(users, friendName) таким чином, щоб вона повертала масив користувачів, у яких є один з ім'ям в параметрі friendName. Масив друзів користувача зберігається у властивості friends.
 
 // Оголошена змінна getUsersWithFriend
@@ -590,50 +676,45 @@ console.log('Task23');
 // Якщо значення параметра friendName - це рядок "Goldie Gentry", функція повертає масив об'єктів користувачів з іменами Elma Head і Sheree Anthony
 // Якщо значення параметра friendName - це рядок "Adrian Cross", функція повертає порожній масив
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
-
+console.log('%cTask24', 'color: green; font-weight: bold;');
 
 // // Change code below this line
 // const getUsersWithFriend = (users, friendName) => {
-   
+
 // };
 // // Change code above this line
-
-
-
-console.log('Task24');
-
+//#endregion
+//#region task25
 // Доповни функцію getFriends(users) таким чином, щоб вона повертала масив друзів всіх користувачів (властивість friends). У декількох користувачів можуть бути однакові друзі, зроби так, щоб масив, що повертається, не містив повторень.
 
 // Оголошена змінна getFriends
 // Змінній getFriends присвоєна стрілочна функція з параметром (users)
 // Виклик функції із зазначеним масивом користувачів повертає масив ["Sharron Pace", "Briana Decker", "Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner", "Goldie Gentry", "Aisha Tran", "Jordan Sampson", "Eddie Strong", "Jacklyn Lucas", "Linda Chapman"]
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('%cTask25', 'color: green; font-weight: bold;');
 
 // // Change code below this line
 // const getFriends = (users) => {
-   
+
 // };
 // // Change code above this line
-
-
-console.log('Task25');
-
+//#endregion
+//#region task26
 // Доповни функцію getActiveUsers(users) таким чином, щоб вона повертала масив активних користувачів, значення властивості isActive яких - true.
 
 // Оголошена змінна getActiveUsers Змінній getActiveUsers присвоєна стрілочна функція з параметром users
 // Для перебирання параметра users використовується метод filter()
 // Виклик функції із зазначеним масивом користувачів повертає масив об'єктів користувачів з іменами Sharlene Bush, Elma Head, Carey Barr і Sheree Anthony
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('%cTask26', 'color: green; font-weight: bold;');
 
 // // Change code below this line
 // const getActiveUsers = (users) => {
-   
+
 // };
 // // Change code above this line
-
-
-console.log('Task26');
-
+//#endregion
+//#region task27
 // Доповни функцію getInactiveUsers(users) таким чином, щоб вона повертала масив неактивних користувачів, значення властивості isActive яких - false.
 
 // Оголошена змінна getInactiveUsers.
@@ -641,17 +722,15 @@ console.log('Task26');
 // Для перебирання параметра users використовується метод filter()
 // Виклик функції із зазначеним масивом користувачів повертає масив об'єктів користувачів з іменами Moore Hensley, Ross Vazquez і Blackburn Dotson
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('%cTask27', 'color: green; font-weight: bold;');
 
 // // Change code below this line
 // const getInactiveUsers = (users) => {
-   
+
 // };
 // // Change code above this line
-
-
-console.log('Task27');
-
-
+//#endregion
+//#region task28
 // Використовуючи метод find(), доповни код таким чином, щоб:
 
 // У змінній bookWithTitle утворився об'єкт книги, назва якої (властивість title) збігається зі значенням змінної BOOK_TITLE.
@@ -667,6 +746,7 @@ console.log('Task27');
 // Оголошена змінна bookByAuthor
 // Значення змінної bookByAuthor - це об'єкт книги автора "Robert Sheckley"
 // Для перебирання масиву books використаний метод find()
+console.log('%cTask28', 'color: green; font-weight: bold;');
 
 // const books = [
 //     {
@@ -689,13 +769,11 @@ console.log('Task27');
 //   const BOOK_TITLE = 'The Dream of a Ridiculous Man';
 //   const AUTHOR = 'Robert Sheckley';
 //   // Change code below this line
-  
+
 //   const bookWithTitle = books;
 //   const bookByAuthor = books;
-  
-
-console.log('Task28');
-
+//#endregion
+//#region task29
 // Доповни функцію getUserWithEmail(users, email) таким чином, щоб вона повертала об'єкт користувача, пошта якого (властивість email) збігається зі значенням параметра email.
 
 // Оголошена функція getUserWithEmail(users, email)
@@ -711,16 +789,15 @@ console.log('Task28');
 // Якщо в масиві users відсутній користувач з поштою із параметра email, функція повертає undefined
 
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('%cTask29', 'color: green; font-weight: bold;');
 
 // // Change code below this line
 // const getUserWithEmail = (users, email) => {
-   
+
 // };
 // // Change code above this line
-
-
-console.log('Task29');
-
+//#endregion
+//#region task30
 // Використовуючи метод every(), доповни код таким чином, щоб:
 
 // У змінній eachElementInFirstIsEven був результат перевірки всіх елементів масиву firstArray на парність.
@@ -748,7 +825,7 @@ console.log('Task29');
 // Оголошена змінна eachElementInThirdIsOdd
 // Значення змінної eachElementInThirdIsOdd - це буль false
 // Для перебирання масивів використаний метод every()
-
+console.log('%cTask30', 'color: green; font-weight: bold;');
 
 // const firstArray = [26, 94, 36, 18];
 // const secondArray = [17, 61, 23];
@@ -763,9 +840,8 @@ console.log('Task29');
 
 // const eachElementInThirdIsEven = thirdArray;
 // const eachElementInThirdIsOdd = thirdArray;
-
-console.log('Task30');
-
+//#endregion
+//#region task31
 // Доповни функцію isEveryUserActive(users) таким чином, щоб вона перевіряла, чи всі користувачі зараз активні (властивість isActive) і повертала true або false.
 
 // Оголошена змінна isEveryUserActive
@@ -773,16 +849,15 @@ console.log('Task30');
 // Для перебирання параметра users використовується метод every()
 // Виклик функції із зазначеним масивом користувачів повертає false
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('%cTask31', 'color: green; font-weight: bold;');
 
 // // Change code below this line
 // const isEveryUserActive = (users) => {
-   
+
 // };
 // // Change code above this line
-
-
-console.log('Task31');
-
+//#endregion
+//#region task32
 // Використовуючи метод some(), доповни код таким чином, щоб:
 
 // У змінній anyElementInFirstIsEven був результат перевірки наявності парних елементів в масиві firstArray.
@@ -810,7 +885,7 @@ console.log('Task31');
 // Оголошена змінна anyElementInThirdIsOdd
 // Значення змінної anyElementInThirdIsOdd - це буль true
 // Для перебирання масивів використаний метод some()
-
+console.log('%cTask32', 'color: green; font-weight: bold;');
 
 // const firstArray = [26, 94, 36, 18];
 // const secondArray = [17, 61, 23];
@@ -825,28 +900,23 @@ console.log('Task31');
 
 // const anyElementInThirdIsEven = thirdArray;
 // const anyElementInThirdIsOdd = thirdArray;
-
-
-console.log('Task32');
-
-
+//#endregion
+//#region task33
 // Доповни функцію isAnyUserActive(users) таким чином, щоб вона перевіряла наявність активних користувачів (властивість isActive) і повертала true або false.
 
 // Оголошена функція isAnyUserActive(users)
 // Для перебирання параметра users використовується метод some()
 // Виклик функції із зазначеним масивом користувачів повертає true
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
-
+console.log('%cTask33', 'color: green; font-weight: bold;');
 
 // // Change code below this line
 // const isAnyUserActive = users => {
-   
+
 // };
 // // Change code above this line
-
-
-console.log('Task33');
-
+//#endregion
+//#region task34
 // Ігровому сервісу необхідний функціонал підрахунку середнього часу, проведеного в іграх. Доповни код таким чином, щоб у змінній totalPlayTime вийшло загальний ігровий час з масиву playtimes.
 
 // Оголошена змінна players
@@ -858,7 +928,7 @@ console.log('Task33');
 // Для перебирання масиву playtimes використовується метод reduce()
 // Оголошена змінна averagePlayTime
 // Значення змінної averagePlayTime - це число 673
-
+console.log('%cTask34', 'color: green; font-weight: bold;');
 
 // const players = {
 //     mango: 1270,
@@ -868,14 +938,13 @@ console.log('Task33');
 //   };
 //   const playtimes = Object.values(players); // [1270, 468, 710, 244]
 //   // Change code below this line
-  
+
 //   const totalPlayTime = playtimes;
-  
+
 //   // Change code above this line
 //   const averagePlayTime = totalPlayTime / playtimes.length;
-
-console.log('Task34');
-
+//#endregion
+//#region task35
 // Нашому сервісу необхідно розрахувати середній час, проведений в одній грі для кожного гравця, і отримати загальну суму цих значень часу. Розрахувати час для кожного з гравців можна, розділивши його час (властивість playtime) на кількість ігор (властивість gamesPlayed).
 
 // Оголошена змінна players
@@ -884,6 +953,7 @@ console.log('Task34');
 // Значення змінної totalAveragePlaytimePerGame - це число 1023
 // Для перебирання масиву players використовується метод reduce()
 
+console.log('%cTask35', 'color: green; font-weight: bold;');
 // const players = [
 //     { name: "Mango", playtime: 1270, gamesPlayed: 4 },
 //     { name: "Poly", playtime: 469, gamesPlayed: 2 },
@@ -891,12 +961,10 @@ console.log('Task34');
 //     { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
 //   ];
 //   // Change code below this line
-  
+
 //   const totalAveragePlaytimePerGame = players;
-  
-
-console.log('Task35');
-
+//#endregion
+//#region task36
 // Доповни функцію calculateTotalBalance(users) таким чином, щоб вона рахувала і повертала суму всіх коштів (властивість balance), які зберігають користувачі з масиву users.
 
 // Оголошена змінна calculateTotalBalance
@@ -905,15 +973,14 @@ console.log('Task35');
 // Виклик функції із зазначеним масивом користувачів повертає число 20916
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 
+console.log('%cTask36', 'color: green; font-weight: bold;');
 // // Change code below this line
 // const calculateTotalBalance = users => {
-   
+
 // };
 // // Change code above this line
-
-
-console.log('Task36');
-
+//#endregion
+//#region task37
 // Доповни функцію getTotalFriendCount(users) таким чином, щоб вона рахувала і повертала загальну кількість друзів (властивість friends) усіх користувачів з масиву users.
 
 // Оголошена змінна getTotalFriendCount
@@ -924,12 +991,13 @@ console.log('Task36');
 
 // // Change code below this line
 // const getTotalFriendCount = users => {
-   
+
 // };
 // // Change code above this line
 
-
-console.log('Task37');
+console.log('%cTask37', 'color: green; font-weight: bold;');
+//#endregion
+//#region task38
 // Доповни код таким чином, щоб у змінній ascendingReleaseDates вийшла копія масиву releaseDates, відсортована за зростанням, а у змінній alphabeticalAuthors - копія масиву імен авторів authors, відсортована за алфавітом.
 
 // Оголошена змінна releaseDates
@@ -941,6 +1009,7 @@ console.log('Task37');
 // Оголошена змінна alphabeticalAuthors
 // Значення змінної alphabeticalAuthors - це масив ["Bernard Cornwell", "Tanith Lee", "Robert Sheckley", "Fyodor Dostoevsky"]
 // Використаний метод sort()
+console.log('%cTask38', 'color: green; font-weight: bold;');
 
 // const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
 // const authors = [
@@ -954,10 +1023,8 @@ console.log('Task37');
 // const ascendingReleaseDates = releaseDates;
 
 // const alphabeticalAuthors = authors;
-
-
-console.log('Task38');
-
+//#endregion
+//#region task39
 // Онлайн бібіліотеці необхідно відображати книги, відсортовані за датою видання, за її зростанням або спаданням. Доповни код таким чином, щоб у змінній ascendingReleaseDates вийшла копія масиву releaseDates, відсортована за зростанням, а у змінній descendingReleaseDates - копія, відсортована за спаданням.
 
 // Оголошена змінна releaseDates
@@ -967,7 +1034,7 @@ console.log('Task38');
 // Оголошена змінна descendingReleaseDates
 // Значення змінної descendingReleaseDates - це масив [2016, 2012, 2008, 1997, 1984, 1973, 1967]
 // Використаний метод sort()
-
+console.log('%cTask39', 'color: green; font-weight: bold;');
 
 // const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
 // // Change code below this line
@@ -975,10 +1042,8 @@ console.log('Task38');
 // const ascendingReleaseDates = releaseDates;
 
 // const descendingReleaseDates = releaseDates;
-
-
-console.log('Task39');
-
+//#endregion
+//#region task40
 // Онлайн бібіліотеці необхідно відображати книги, відсортовані за автором, в алфавітному і зворотному алфавітному порядку. Доповни код таким чином, щоб у змінній authorsInAlphabetOrder вийшла копія масиву authors, відсортована за алфавітом, а у змінній authorsInReversedOrder - копія, відсортована у зворотному алфавітному порядку.
 
 // Оголошена змінна authors
@@ -988,6 +1053,7 @@ console.log('Task39');
 // Оголошена змінна authorsInReversedOrder
 // Значення змінної authorsInReversedOrder - це масив ["Tanith Lee", "Robert Sheckley", "Howard Lovecraft", "Fyodor Dostoevsky", "Bernard Cornwell"]
 // Використаний метод sort()
+console.log('%cTask40', 'color: green; font-weight: bold;');
 
 // const authors = [
 //     "Tanith Lee",
@@ -997,15 +1063,12 @@ console.log('Task39');
 //     "Howard Lovecraft",
 //   ];
 //   // Change code below this line
-  
+
 //   const authorsInAlphabetOrder = authors;
-  
+
 //   const authorsInReversedOrder = authors;
-
-  
-console.log('Task40');
-
-
+//#endregion
+//#region task41
 // Доповни код таким чином, щоб:
 
 // У змінній sortedByAuthorName вийшов масив книг, відсортований за ім'ям автора в алфавітному порядку.
@@ -1023,7 +1086,7 @@ console.log('Task40');
 // Оголошена змінна sortedByDescentingRating
 // Значення змінної sortedByDescentingRating - це масив книг, відсортований за спаданням рейтингу
 // Для перебирання масиву books використовується метод sort()
-
+console.log('%cTask41', 'color: green; font-weight: bold;');
 
 // const books = [
 //     {
@@ -1045,16 +1108,16 @@ console.log('Task40');
 //     { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
 //   ];
 //   // Change code below this line
-  
+
 //   const sortedByAuthorName = books;
-  
+
 //   const sortedByReversedAuthorName = books;
-  
+
 //   const sortedByAscendingRating = books;
-  
+
 //   const sortedByDescentingRating = books;
-  
-console.log('Task41');
+//#endregion
+//#region task42
 
 // Доповни функцію sortByAscendingBalance(users) таким чином, щоб вона повертала масив користувачів, відсортований за зростанням їх балансу (властивість balance).
 
@@ -1064,15 +1127,15 @@ console.log('Task41');
 // Виклик функції із зазначеним масивом користувачів повертає новий масив користувачів, відсортований за зростанням їх балансу
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 // Для перебирання параметра users використаний метод sort()
+console.log('%cTask42', 'color: green; font-weight: bold;');
 
 // // Change code below this line
 // const sortByAscendingBalance = users => {
-   
+
 // };
 // // Change code above this line
-
-console.log('Task42');
-
+//#endregion
+//#region task43
 // Доповни функцію sortByDescendingFriendCount(users) таким чином, щоб вона повертала масив користувачів, відсортований за спаданням кількості їхніх друзів (властивість friends).
 
 // Оголошена змінна sortByDescendingFriendCount
@@ -1081,16 +1144,15 @@ console.log('Task42');
 // Для перебирання параметра users використаний метод sort()
 // Виклик функції із зазначеним масивом користувачів повертає новий масив користувачів, відсортований за спаданням кількості їхніх друзів
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('%cTask43', 'color: green; font-weight: bold;');
 
 // // Change code below this line
 // const sortByDescendingFriendCount = users => {
-   
+
 // };
 // // Change code above this line
-
-
-console.log('Task43');
-
+//#endregion
+//#region task44
 // Доповни функцію sortByName(users) таким чином, щоб вона повертала масив користувачів, відсортований за їх ім'ям (властивість name) в алфавітному порядку.
 
 // Оголошена змінна sortByName
@@ -1099,16 +1161,15 @@ console.log('Task43');
 // Для перебирання параметра users використаний метод sort()
 // Виклик функції із зазначеним масивом користувачів повертає новий масив користувачів, відсортований за ім'ям в алфавітному порядку
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('%cTask44', 'color: green; font-weight: bold;');
 
 // // Change code below this line
 // const sortByName = users => {
 
 // };
 // // Change code above this line
-
-
-console.log('Task44');
-
+//#endregion
+//#region task45
 // Доповни код таким чином, щоб у змінній names вийшов масив імен авторів в алфавітному порядку, рейтинг книг яких більший за значення змінної MIN_BOOK_RATING.
 
 // Оголошена змінна books
@@ -1120,6 +1181,7 @@ console.log('Task44');
 // Відсутні оголошені змінні, крім books, MIN_BOOK_RATING і names
 // Використовується ланцюжок методів filter, map, sort
 
+console.log('%cTask45', 'color: green; font-weight: bold;');
 // const books = [
 //     {
 //       title: "The Last Kingdom",
@@ -1145,12 +1207,10 @@ console.log('Task44');
 //   ];
 //   const MIN_BOOK_RATING = 8;
 //   // Change code below this line
-  
+
 //   const names = books;
-  
-console.log('Task45');
-
-
+//#endregion
+//#region task46
 // Доповни функцію getNamesSortedByFriendCount(users) таким чином, щоб вона повертала масив імен користувачів, відсортований за зростанням кількості їхніх друзів (властивість friends).
 
 // Оголошена змінна getNamesSortedByFriendCount
@@ -1159,6 +1219,7 @@ console.log('Task45');
 // Значення параметра users не змінюється
 // Виклик функції із зазначеним масивом користувачів повертає масив ["Moore Hensley", "Sharlene Bush", "Elma Head", "Sheree Anthony", "Ross Vazquez", "Carey Barr", "Blackburn Dotson"]
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('%cTask46', 'color: green; font-weight: bold;');
 
 // const users = [
 //     {
@@ -1225,16 +1286,14 @@ console.log('Task45');
 //       gender: "female"
 //     }
 //   ];
-  
+
 //   // Change code below this line
 //   const getNamesSortedByFriendCount = users => {
 //      return [...users].sort((a,b)=>a.friends.length-b.friends.length).map(({name})=>name)
 //   };
 //   // Change code above this line
-
-
-console.log('Task46');
-
+//#endregion
+//#region task47
 // Доповни функцію getSortedFriends(users) таким чином, щоб вона повертала масив унікальних імен друзів (властивість friends), відсортований за алфавітом.
 
 // Оголошена змінна getSortedFriends
@@ -1244,15 +1303,14 @@ console.log('Task46');
 // Виклик функції із зазначеним масивом користувачів повертає масив ["Adrian Cross", "Aisha Tran", "Briana Decker", "Eddie Strong", "Goldie Gentry", "Jacklyn Lucas", "Jordan Sampson", "Linda Chapman", "Marilyn Mcintosh", "Naomi Buckner", "Padilla Garrison", "Sharron Pace", "Solomon Fokes"]
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 
+console.log('%cTask47', 'color: green; font-weight: bold;');
 // // Change code below this line
 // const getSortedFriends = users => {
-   
+
 // };
 // // Change code above this line
-
-
-console.log('Task47');
-
+//#endregion
+//#region task48
 // Доповни функцію getTotalBalanceByGender(users, gender) таким чином, щоб вона повертала загальний баланс користувачів (властивість balance), стать яких (властивість gender) збігається зі значенням параметра gender.
 
 // Оголошена змінна getTotalBalanceByGender
@@ -1263,11 +1321,10 @@ console.log('Task47');
 // Якщо значення параметра gender - це рядок "female", функція повертає число 8863
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 
+console.log('%cTask48', 'color: green; font-weight: bold;');
 // // Change code below this line
 // const getTotalBalanceByGender = (users, gender) => {
 
 // };
 // // Change code above this line
-
-
-console.log('Task48');
+//#endregion

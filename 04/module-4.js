@@ -429,7 +429,7 @@ console.log('genres', genres);
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 console.log('%cTask17', 'color: green; font-weight: bold;');
 
-const user = [
+const users = [
   {
     name: 'Moore Hensley',
     email: 'moorehensley@indexia.com',
@@ -513,10 +513,10 @@ const getUserNames = users => {
   return users.map(user => user.name);
 };
 
-console.log('getUserNames', getUserNames(user));
+console.log('getUserNames', getUserNames(users));
 
 //#endregion
-//#region task18
+// #region task18
 // Доповни функцію getUserEmails(users) таким чином, щоб вона повертала масив поштових адрес користувачів (властивість email) з масиву об'єктів в параметрі users.
 
 // Оголошена змінна getUserNames
@@ -526,13 +526,14 @@ console.log('getUserNames', getUserNames(user));
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 console.log('%cTask18', 'color: green; font-weight: bold;');
 
-// // Change code below this line
-// const getUserEmails = users => {
+const getUserEmails = users => {
+  return users.map(user => user.email);
+};
 
-// };
-// // Change code above this line
+console.log('getUserEmails', getUserEmails(users));
+
 //#endregion
-//#region task19
+// #region task19
 // Доповни код таким чином, щоб у змінній evenNumbers утворився масив парних чисел з масиву numbers, а в змінній oddNumbers - масив непарних. Обов'язково використовуй метод filter().
 
 // Оголошена змінна numbers
@@ -544,13 +545,14 @@ console.log('%cTask18', 'color: green; font-weight: bold;');
 // Для перебирання масиву numbers використаний метод filter()
 console.log('%cTask19', 'color: green; font-weight: bold;');
 
-// const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
-// // Change code below this line
+const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+const evenNumbers = numbers.filter(number => number % 2 === 0);
+const oddNumbers = numbers.filter(number => number % 2 !== 0);
+console.log('evenNumbers', evenNumbers);
+console.log('oddNumbers', oddNumbers);
 
-// const evenNumbers = numbers;
-// const oddNumbers = numbers;
 //#endregion
-//#region task20
+// #region task20
 // Доповни код таким чином, щоб у змінній allGenres був масив всіх жанрів книг (властивість genres) з масиву books, а у змінній uniqueGenres - масив унікальних жанрів, без повторень.
 
 // Оголошена змінна books
@@ -563,28 +565,32 @@ console.log('%cTask19', 'color: green; font-weight: bold;');
 // Для обчислення значення змінної uniqueGenres використаний метод filter()
 console.log('%cTask20', 'color: green; font-weight: bold;');
 
-// const books = [
-//     {
-//       title: "The Last Kingdom",
-//       author: "Bernard Cornwell",
-//       genres: ["adventure", "history"],
-//     },
-//     {
-//       title: "Beside Still Waters",
-//       author: "Robert Sheckley",
-//       genres: ["fiction", "mysticism"],
-//     },
-//     {
-//       title: "Redder Than Blood",
-//       author: "Tanith Lee",
-//       genres: ["horror", "mysticism", "adventure"],
-//     },
-//   ];
-//   // Change code below this line
-//   const allGenres = books;
-//   const uniqueGenres = allGenres;
+const books20 = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    genres: ['adventure', 'history'],
+  },
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    genres: ['fiction', 'mysticism'],
+  },
+  {
+    title: 'Redder Than Blood',
+    author: 'Tanith Lee',
+    genres: ['horror', 'mysticism', 'adventure'],
+  },
+];
+// Change code below this line
+const allGenres = books20.flatMap(book => book.genres);
+const uniqueGenres = allGenres.filter(
+  (genre, i) => allGenres.indexOf(genre) === i
+);
+console.log('allGenres', allGenres);
+console.log('uniqueGenres', uniqueGenres);
 //#endregion
-//#region task21
+// #region task21
 // Використовуючи метод filter(), доповни код таким чином, щоб:
 
 // У змінній topRatedBooks утворився масив книг, рейтинг яких (властивість rating) більший за або дорівнює значенню змінної MIN_RATING.
@@ -602,34 +608,44 @@ console.log('%cTask20', 'color: green; font-weight: bold;');
 // Для перебирання масиву books використаний метод filter()
 
 console.log('%cTask21', 'color: green; font-weight: bold;');
-// const books = [
-//     {
-//       title: "The Last Kingdom",
-//       author: "Bernard Cornwell",
-//       rating: 8.38,
-//     },
-//     {
-//       title: "Beside Still Waters",
-//       author: "Robert Sheckley",
-//       rating: 8.51,
-//     },
-//     {
-//       title: "The Dream of a Ridiculous Man",
-//       author: "Fyodor Dostoevsky",
-//       rating: 7.75,
-//     },
-//     { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
-//     { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
-//   ];
+const books21 = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    rating: 8.38,
+  },
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    rating: 8.51,
+  },
+  {
+    title: 'The Dream of a Ridiculous Man',
+    author: 'Fyodor Dostoevsky',
+    rating: 7.75,
+  },
+  {
+    title: 'Redder Than Blood',
+    author: 'Tanith Lee',
+    rating: 7.94,
+  },
+  {
+    title: 'Enemy of God',
+    author: 'Bernard Cornwell',
+    rating: 8.67,
+  },
+];
 
-//   const MIN_RATING = 8;
-//   const AUTHOR = "Bernard Cornwell";
-//   // Change code below this line
+const MIN_RATING = 8;
+const AUTHOR = 'Bernard Cornwell';
 
-//   const topRatedBooks = books;
-//   const booksByAuthor = books;
+const topRatedBooks = books.filter(book => book.rating >= MIN_RATING);
+const booksByAuthor = books.filter(book => book.author === AUTHOR);
+console.log('topRatedBooks', topRatedBooks);
+console.log('booksByAuthor', booksByAuthor);
+
 //#endregion
-//#region task22
+// #region task22
 // Доповни функцію getUsersWithEyeColor(users, color) таким чином, щоб вона повертала масив користувачів, у яких колір очей (властивість eyeColor) збігається зі значенням параметра color.
 
 // Оголошена змінна getUsersWithEyeColor
@@ -642,13 +658,15 @@ console.log('%cTask21', 'color: green; font-weight: bold;');
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 console.log('%cTask22', 'color: green; font-weight: bold;');
 
-// // Change code below this line
-// const getUsersWithEyeColor = (users, color) => {
+const getUsersWithEyeColor = (users, color) =>
+  users.filter(user => user.eyeColor === color);
 
-// };
-// // Change code above this line
+console.log(getUsersWithEyeColor(users, 'blue'));
+console.log(getUsersWithEyeColor(users, 'green'));
+console.log(getUsersWithEyeColor(users, 'brown'));
+
 //#endregion
-//#region task23
+// #region task23
 // Доповни функцію getUsersWithAge(users, minAge, maxAge) таким чином, щоб вона повертала масив користувачів, вік яких (властивість age) потрапляє у проміжок від minAge до maxAge.
 
 // Оголошена змінна getUsersWithAge
@@ -660,13 +678,14 @@ console.log('%cTask22', 'color: green; font-weight: bold;');
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 console.log('%cTask23', 'color: green; font-weight: bold;');
 
-// // Change code below this line
-// const getUsersWithAge = (users, minAge, maxAge) => {
+const getUsersWithAge = (users, minAge, maxAge) =>
+  users.filter(user => user.age >= minAge && user.age <= maxAge);
+console.log(getUsersWithAge(users, 20, 30));
+console.log(getUsersWithAge(users, 30, 40));
+console.log(getUsersWithAge(users, 80, 100));
 
-// };
-// // Change code above this line
 //#endregion
-//#region task24
+// #region task24
 // Доповни функцію getUsersWithFriend(users, friendName) таким чином, щоб вона повертала масив користувачів, у яких є один з ім'ям в параметрі friendName. Масив друзів користувача зберігається у властивості friends.
 
 // Оголошена змінна getUsersWithFriend
@@ -678,13 +697,15 @@ console.log('%cTask23', 'color: green; font-weight: bold;');
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 console.log('%cTask24', 'color: green; font-weight: bold;');
 
-// // Change code below this line
-// const getUsersWithFriend = (users, friendName) => {
+const getUsersWithFriend = (users, friendName) =>
+  users.filter(user => user.friends.includes(friendName));
+console.log(getUsersWithFriend(users, 'Briana Decker'));
+console.log(getUsersWithFriend(users, 'Goldie Gentry'));
+console.log(getUsersWithFriend(users, 'Adrian Cross'));
+console.log('users', users);
 
-// };
-// // Change code above this line
 //#endregion
-//#region task25
+// #region task25
 // Доповни функцію getFriends(users) таким чином, щоб вона повертала масив друзів всіх користувачів (властивість friends). У декількох користувачів можуть бути однакові друзі, зроби так, щоб масив, що повертається, не містив повторень.
 
 // Оголошена змінна getFriends
@@ -693,13 +714,19 @@ console.log('%cTask24', 'color: green; font-weight: bold;');
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 console.log('%cTask25', 'color: green; font-weight: bold;');
 
-// // Change code below this line
-// const getFriends = (users) => {
+const getFriends = users => {
+  const allUserFriends = users.flatMap(user => user.friends);
+  const uniqueFriends = allUserFriends.filter(
+    (friend, index, arrayAllUserFriends) =>
+      arrayAllUserFriends.indexOf(friend) === index
+  );
+  return uniqueFriends;
+};
+console.log(users);
+console.log(getFriends(users));
 
-// };
-// // Change code above this line
 //#endregion
-//#region task26
+// #region task26
 // Доповни функцію getActiveUsers(users) таким чином, щоб вона повертала масив активних користувачів, значення властивості isActive яких - true.
 
 // Оголошена змінна getActiveUsers Змінній getActiveUsers присвоєна стрілочна функція з параметром users
@@ -708,13 +735,11 @@ console.log('%cTask25', 'color: green; font-weight: bold;');
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 console.log('%cTask26', 'color: green; font-weight: bold;');
 
-// // Change code below this line
-// const getActiveUsers = (users) => {
+const getActiveUsers = users => users.filter(user => user.isActive === true);
+console.log(getActiveUsers(users));
 
-// };
-// // Change code above this line
 //#endregion
-//#region task27
+// #region task27
 // Доповни функцію getInactiveUsers(users) таким чином, щоб вона повертала масив неактивних користувачів, значення властивості isActive яких - false.
 
 // Оголошена змінна getInactiveUsers.
@@ -724,13 +749,11 @@ console.log('%cTask26', 'color: green; font-weight: bold;');
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 console.log('%cTask27', 'color: green; font-weight: bold;');
 
-// // Change code below this line
-// const getInactiveUsers = (users) => {
+const getInactiveUsers = users => users.filter(user => user.isActive === false);
+console.log(getInactiveUsers(users));
 
-// };
-// // Change code above this line
 //#endregion
-//#region task28
+// #region task28
 // Використовуючи метод find(), доповни код таким чином, щоб:
 
 // У змінній bookWithTitle утворився об'єкт книги, назва якої (властивість title) збігається зі значенням змінної BOOK_TITLE.
@@ -748,32 +771,35 @@ console.log('%cTask27', 'color: green; font-weight: bold;');
 // Для перебирання масиву books використаний метод find()
 console.log('%cTask28', 'color: green; font-weight: bold;');
 
-// const books = [
-//     {
-//       title: 'The Last Kingdom',
-//       author: 'Bernard Cornwell',
-//       rating: 8.38,
-//     },
-//     {
-//       title: 'Beside Still Waters',
-//       author: 'Robert Sheckley',
-//       rating: 8.51,
-//     },
-//     {
-//       title: 'The Dream of a Ridiculous Man',
-//       author: 'Fyodor Dostoevsky',
-//       rating: 7.75,
-//     },
-//     { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
-//   ];
-//   const BOOK_TITLE = 'The Dream of a Ridiculous Man';
-//   const AUTHOR = 'Robert Sheckley';
-//   // Change code below this line
+const books28 = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    rating: 8.38,
+  },
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    rating: 8.51,
+  },
+  {
+    title: 'The Dream of a Ridiculous Man',
+    author: 'Fyodor Dostoevsky',
+    rating: 7.75,
+  },
+  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+];
+const BOOK_TITLE = 'The Dream of a Ridiculous Man';
+const AUTHOR28 = 'Robert Sheckley';
 
-//   const bookWithTitle = books;
-//   const bookByAuthor = books;
+const bookWithTitle = books.find(book=>book.title===BOOK_TITLE);
+const bookByAuthor = books.find(book=>book.author===AUTHOR28);
+
+console.log('bookWithTitle28', bookWithTitle );
+console.log('bookByAuthor28', bookByAuthor);
+
 //#endregion
-//#region task29
+// #region task29
 // Доповни функцію getUserWithEmail(users, email) таким чином, щоб вона повертала об'єкт користувача, пошта якого (властивість email) збігається зі значенням параметра email.
 
 // Оголошена функція getUserWithEmail(users, email)
@@ -791,11 +817,13 @@ console.log('%cTask28', 'color: green; font-weight: bold;');
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 console.log('%cTask29', 'color: green; font-weight: bold;');
 
-// // Change code below this line
-// const getUserWithEmail = (users, email) => {
 
-// };
-// // Change code above this line
+const getUserWithEmail = (users, email) =>users.filter(user=>user.email===email)
+console.log('getUserWithEmail', getUserWithEmail(users, "shereeanthony@kog.com"))
+console.log('getUserWithEmail', getUserWithEmail(users, "elmahead@omatom.com"))
+console.log('getUserWithEmail', getUserWithEmail(users, "blackburndotson@furnigeer.com"))
+
+
 //#endregion
 //#region task30
 // Використовуючи метод every(), доповни код таким чином, щоб:

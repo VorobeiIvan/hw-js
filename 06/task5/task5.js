@@ -4,3 +4,12 @@
 // <input type="text" id="name-input" placeholder="Please enter your name" />
 // <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
 
+const nameInput = document.querySelector('#name-input');
+const nameOutput = document.querySelector('#name-output');
+
+const handlerInputName = () => {
+  nameInput.value.trim() !== ''
+    ? (nameOutput.textContent = nameInput.value)
+    : (nameOutput.textContent = 'Anonymous');
+};
+nameInput.addEventListener('input', handlerInputName);

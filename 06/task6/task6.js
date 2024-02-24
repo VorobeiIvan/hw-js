@@ -23,3 +23,16 @@
 // #validation-input.invalid {
 //   border-color: #f44336;
 // }
+
+const validationInput = document.querySelector('#validation-input');
+
+const handlerInput = () => {
+  if (validationInput.dataset.length <= validationInput.value.length) {
+    validationInput.classList.add('valid');
+    validationInput.classList.remove('invalid');
+  } else {
+    validationInput.classList.add('invalid');
+    validationInput.classList.remove('valid');
+  }
+};
+validationInput.addEventListener('blur', handlerInput);

@@ -56,8 +56,8 @@ console.log('Number of categories:', children.length);
 
 const item = [...children];
 item.forEach(item => {
-  const category = item.querySelector('h2').textContent;
-  const elements = item.querySelector('ul').children.length;
+  const category = item.firstElementChild.textContent;
+  const elements = item.lastElementChild.children.length;
 
   console.log('Category: ', category);
   console.log('Elements: ', elements);

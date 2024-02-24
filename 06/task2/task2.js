@@ -29,12 +29,12 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-const ul = document.querySelector('#ingredients');
+const ulEl = document.querySelector('#ingredients');
 const createTags = ingredients.map(ingredient => {
-  const li = document.createElement('li');
-  li.textContent = ingredient;
-  li.classList.add('item');
-  return li;
+  const liEl = document.createElement('li');
+  liEl.textContent = ingredient;
+  liEl.classList.add('item');
+  return liEl;
 });
-ul.append(...createTags);
-console.log(ul);
+ulEl.append(...createTags);
+console.log(ulEl);

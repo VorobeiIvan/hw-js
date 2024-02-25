@@ -17,10 +17,10 @@ const counterDecrementBTN = document.querySelector('[data-action="decrement"]');
 const counterIncrementBTN = document.querySelector('[data-action="increment"]');
 
 const handlerCounterDecrement = () => {
-  counterValue -= 1;
-  counterValueDisplay.textContent > 0
-    ? (counterValueDisplay.textContent = counterValue)
-    : (counterValue = 0);
+  if (counterValue > 0) {
+    counterValue -= 1;
+    counterValueDisplay.textContent = counterValue;
+  }
 };
 const handlerCounterIncrement = () => {
   counterValue += 1;

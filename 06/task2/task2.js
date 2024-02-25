@@ -30,11 +30,10 @@ const ingredients = [
   'Condiments',
 ];
 const ulEl = document.querySelector('#ingredients');
-const createTags = ingredients.map(ingredient => {
+ingredients.forEach(ingredient => {
   const liEl = document.createElement('li');
   liEl.textContent = ingredient;
   liEl.classList.add('item');
-  return liEl;
+  ulEl.appendChild(liEl);
 });
-ulEl.append(...createTags);
-console.log(ulEl);
+console.log(ulEl.innerHTML);

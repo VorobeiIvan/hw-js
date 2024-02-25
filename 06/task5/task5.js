@@ -8,8 +8,7 @@ const nameInput = document.querySelector('#name-input');
 const nameOutput = document.querySelector('#name-output');
 
 const handlerInputName = () => {
-  nameInput.value.trim() !== ''
-    ? (nameOutput.textContent = nameInput.value)
-    : (nameOutput.textContent = 'Anonymous');
+  const inputValue = nameInput.value.trim();
+  nameOutput.textContent = inputValue === '' ? 'Anonymous' : inputValue;
 };
 nameInput.addEventListener('input', handlerInputName);

@@ -22,8 +22,60 @@
 
 // Створи функцію destroyBoxes(), яка очищає вміст div#boxes, у такий спосіб видаляючи всі створені елементи.
 
+const controlsEl = document.querySelector('#controls');
+const boxesEl = document.querySelector('#boxes');
+const createBTN = controlsEl.querySelector('[data-create]');
+const destroyBTN = controlsEl.querySelector('[data-destroy]');
+const inputElement = controlsEl.querySelector('input');
+
+let amount = 0;
+function handlerInput() {
+  amount = parseInt(inputElement.value);
+}
+
+function createBoxes(amount) {
+  cleaningDisplay();
+  createMarkup(amount);
+  cleaningInputValue();
+}
+
+function createMarkup(amount) {
+  let widthValue = 30;
+  let heightValue = 30;
+  const step = 10;
+
+  boxesEl.innerHTML = new Array(amount)
+    .fill('')
+    .map(() => {
+      const color = getRandomHexColor();
+      const boxMarkup = `<div style="background-color: ${color}; 
+          width: ${(widthValue += step)}px;
+          height: ${(heightValue += step)}px;">
+       </div>`;
+      return boxMarkup;
+    })
+    .join('');
+}
+
+function cleaningDisplay() {
+  boxesEl.innerHTML = '';
+}
+function cleaningInputValue() {
+  inputElement.value = '';
+}
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
 }
+
+function handlerCreateBTN() {
+  createBoxes(amount);
+}
+function handlerDestroyBTN() {
+  cleaningDisplay();
+}
+
+controlsEl.addEventListener('input', handlerInput);
+createBTN.addEventListener('click', handlerCreateBTN);
+destroyBTN.addEventListener('click', handlerDestroyBTN);

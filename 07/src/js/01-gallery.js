@@ -3,7 +3,10 @@
 // Створення і рендер розмітки на підставі масиву даних galleryItems і наданого шаблону елемента галереї.
 
 // Реалізація делегування на ul.gallery і отримання url великого зображення.
-// Підключення скрипту і стилів бібліотеки модального вікна basicLightbox. Використовуй CDN сервіс jsdelivr і додай у проект посилання на мініфіковані (.min) файли бібліотеки.
+// Підключення скрипту і стилів бібліотеки модального вікна basicLightbox.
+
+// Використовуй CDN сервіс jsdelivr і додай у проект посилання на мініфіковані(.min) файли бібліотеки.
+
 // Відкриття модального вікна по кліку на елементі галереї. Для цього ознайомся з документацією і прикладами.
 // Заміна значення атрибута src елемента <img> в модальному вікні перед відкриттям. Використовуй готову розмітку модального вікна із зображенням з прикладів бібліотеки basicLightbox.
 // Розмітка елемента галереї
@@ -26,7 +29,7 @@
 
 import { galleryItems } from './gallery-items.js';
 
-const ulElementGallery = document.querySelector('.gallery'); // доступ до списку, куди будемо вкладати лішки
+const ulElementGallery = document.querySelector('.gallery');
 
 function createMarkup(galleryItems) {
   return galleryItems
@@ -44,5 +47,25 @@ function createMarkup(galleryItems) {
     })
     .join('');
 }
-// event.preventDefault();
+
 ulElementGallery.innerHTML = createMarkup(galleryItems);
+ulElementGallery.addEventListener('click', openModalWithImage);
+
+let instance;
+
+function openModalWithImage(event) {
+  event.preventDefault();
+  const originalImageUrl = event.target.dataset.source;
+  instance = basicLightbox.create(`
+    <img  src="${originalImageUrl}" width="800" height="600">
+`);
+  instance.show();
+  document.addEventListener('keydown', closeModalByEsc);
+}
+
+function closeModalByEsc(event) {
+  if (event.key === 'Escape') {
+    instance.close();
+    document.removeEventListener('keydown', closeModalByEsc);
+  }
+}

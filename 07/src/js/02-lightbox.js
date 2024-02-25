@@ -3,11 +3,13 @@
 
 // Необхідно трохи змінити розмітку картки галереї, використовуй цей шаблон.
 
-// <li class="gallery__item">
-//    <a class="gallery__link" href="large-image.jpg">
-//       <img class="gallery__image" src="small-image.jpg" alt="Image description" />
-//    </a>
-// </li>
+{
+  /* <li class="gallery__item">
+   <a class="gallery__link" href="large-image.jpg">
+      <img class="gallery__image" src="small-image.jpg" alt="Image description" />
+   </a>
+</li> */
+}
 
 // Виконуй це завдання у файлах 02-lightbox.html і 02-lightbox.js. Розбий його на декілька підзавдань:
 
@@ -17,6 +19,29 @@
 // Подивися в документації секцію «Options» і додай відображення підписів до зображень з атрибута alt. Нехай підпис буде знизу і з'являється через 250 мілісекунд після відкриття зображення.
 
 import { galleryItems } from './gallery-items.js';
-// Change code below this line
 
-console.log(galleryItems);
+const ulElementGallery = document.querySelector('.gallery');
+
+function createMarkup(galleryItems) {
+  return galleryItems
+    .map(({ preview, original, description }) => {
+      return `<li class="gallery__item">
+                <a class="gallery__link" href="${original}">
+                 <img class="gallery__image" src="${preview}" alt="${description}" />
+                 </a>
+             </li>`;
+    })
+    .join('');
+}
+
+ulElementGallery.innerHTML = createMarkup(galleryItems);
+
+const options = {
+  captions: true,
+  captionsData: 'alt',
+  captionPosition: 'bottom',
+  captionDelay: 250,
+  close: false,
+};
+
+const openModalWithImage = new SimpleLightbox('.gallery a', options);

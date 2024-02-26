@@ -9,4 +9,28 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import { galleryItems } from './gallery-items';
 
-console.log(galleryItems);
+const ulElementGallery = document.querySelector('.gallery');
+
+function createMarkup(galleryItems) {
+  return galleryItems
+    .map(({ preview, original, description }) => {
+      return `<li class="gallery__item">
+                <a class="gallery__link" href="${original}">
+                 <img class="gallery__image" src="${preview}" alt="${description}" />
+                 </a>
+             </li>`;
+    })
+    .join('');
+}
+
+ulElementGallery.innerHTML = createMarkup(galleryItems);
+
+const options = {
+  captions: true,
+  captionsData: 'alt',
+  captionPosition: 'bottom',
+  captionDelay: 250,
+  close: false,
+};
+
+const openModalWithImage = new SimpleLightbox('.gallery a', options);
